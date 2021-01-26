@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+@import "./reset";
+
+@import "theme/header";
+@import "theme/footer";
+
+@import "pages/home";
+
+body {
+    position: relative;
+}
+
+.back_to_top {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    padding: 10px 12px;
+    border-radius: 18px;
+    font-weight: 400;
+    color: $color-main-light;
+    background-color: $color-main-default;
+    text-decoration: none;
+}

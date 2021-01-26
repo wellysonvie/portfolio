@@ -1,0 +1,69 @@
+.container {
+    padding: 0 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 5px 8px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.img-responsive-16by9 {
+    display: block;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.main_header {
+    background-color: $color-main-default;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .main_header_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .brand {
+            font-size: 1.2em;
+            font-weight: 700;
+
+            h1 {
+                color: $color-font-default;
+                color: $color-main-light;
+            }
+
+            p {
+                color: darken($color-main-light, 20%);
+            }
+        }
+
+        .menu {
+            ul {
+                display: flex;
+                font-weight: 400;
+
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        color: $color-main-light;
+                        &:hover {
+                            color: darken($color-main-light, 30%);
+                        }
+                    }
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
