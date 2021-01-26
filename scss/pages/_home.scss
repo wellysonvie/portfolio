@@ -15,8 +15,8 @@
             background-color: rgba(0, 0, 0, 0.8);
             font-size: 1.3em;
             font-weight: 100;
-            color: $color-main-light; 
-            
+            color: $color-main-light;
+
             h1 {
                 margin-bottom: 10px;
             }
@@ -130,16 +130,16 @@
 
 .main_contact {
     padding: 40px 0;
-    background-color: $color-main-light;
+    background-color: $color-main-secondary;
 
     .main_contact_content {
         .main_contact_content_title {
-            border-bottom: 1px solid $color-font-default;
+            border-bottom: 1px solid $color-main-light;
             padding: 15px 0;
             margin-bottom: 30px;
 
             h1 {
-                color: $color-font-default;
+                color: $color-main-light;
                 font-size: 2em;
             }
         }
@@ -151,7 +151,7 @@
 
             h2 {
                 font-size: 1.1em;
-                color: $color-main-secondary;
+                color: $color-main-light;
                 margin-bottom: 15px;
             }
 
@@ -161,7 +161,8 @@
                 min-width: 600px;
                 margin-bottom: 30px;
 
-                input, textarea {
+                input,
+                textarea {
                     width: 100%;
                     max-width: 100%;
                     min-width: 100%;
@@ -169,12 +170,14 @@
                     margin-bottom: 10px;
                     border: 1px solid #ccc;
                     border-radius: 4px;
+                    font-family: $font-family;
                 }
 
                 button {
                     padding: 8px 13px;
                     background-color: $color-main-default;
                     color: white;
+                    font-weight: bold;
 
                     &:hover {
                         background-color: lighten($color-main-default, 20%);
@@ -207,6 +210,83 @@
         text-align: center;
         p {
             font-size: 0.875em;
+        }
+    }
+}
+
+.main_about {
+    padding: 40px 0;
+    background-color: $color-main-light;
+
+    .main_about_content {
+        .main_about_content_title {
+            border-bottom: 1px solid $color-font-default;
+            padding: 15px 0;
+            margin-bottom: 30px;
+
+            h1 {
+                color: $color-font-default;
+                font-size: 2em;
+            }
+        }
+
+        .main_about_content_profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .profile_img {
+                margin-bottom: 20px;
+                border: 2px solid white;
+                border-radius: 50%;
+
+                img {
+                    width: 160px;
+                    border-radius: 50%;
+                }
+            }
+
+            p {
+                width: 500px;
+                font-size: 1.1em;
+                color: $color-main-secondary;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+
+        .main_about_content_skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 1.1em;
+                color: $color-main-secondary;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            ul {
+                padding: 20px 0;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                li {
+                    flex-basis: 20%;
+                    font-size: 4em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .skill_name {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 }
