@@ -55,7 +55,7 @@
                     a {
                         color: $color-main-light;
                         &:hover {
-                            color: darken($color-main-light, 30%);
+                            color: $color-main-light-blue;
                         }
                     }
                 }
