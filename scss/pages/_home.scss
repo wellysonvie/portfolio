@@ -1,6 +1,6 @@
 .main_slide {
-    background-image: url("../../assets/images/img-slide.png");
-    background-position: center 5%;
+    background-image: url("../../assets/images/img-slide.jpg");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 430px;
@@ -55,6 +55,7 @@
                     width: 100%;
 
                     img {
+                        height: 230px;
                         width: 100%;
                         object-fit: cover;
                         border-top-left-radius: 5px;
@@ -166,8 +167,9 @@
                     width: 100%;
                     max-width: 100%;
                     min-width: 100%;
+
                     padding: 10px;
-                    margin-bottom: 10px;
+                    margin-bottom: 12px;
                     border: 1px solid #ccc;
                     border-radius: 4px;
                     font-family: $font-family;
