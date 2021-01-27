@@ -283,19 +283,6 @@
     }
 }
 
-.main_footer {
-    padding: 15px 0;
-    background-color: $color-main-default;
-    color: $color-main-light;
-
-    .main_footer_content {
-        text-align: center;
-        p {
-            font-size: 0.875em;
-        }
-    }
-}
-
 @media (max-width: 768px){
     .main_contact_content_options {
         form, .social_network {

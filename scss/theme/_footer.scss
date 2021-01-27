@@ -1,0 +1,29 @@
+.main_footer {
+    padding: 15px 0;
+    background-color: $color-main-default;
+    color: $color-main-light;
+
+    .main_footer_content {
+        text-align: center;
+        p {
+            font-size: 0.875em;
+        }
+    }
+}
+
+body {
+    position: relative;
+}
+
+.back_to_top {
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    padding: 10px 15px;
+    @include border_radius(50%);
+    font-weight: 400;
+    font-size: 1.5em;
+    color: $color-main-light;
+    background-color: $color-main-default;
+    text-decoration: none;
+}
