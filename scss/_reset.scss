@@ -20,7 +20,7 @@ html {
 
 ::-webkit-scrollbar {
   width: 8px;
-  height: 3px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #ebebeb; 
@@ -32,4 +32,31 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(141, 141, 141); 
+}
+
+
+.container {
+  padding: 0 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.img-responsive-16by9 {
+  display: block;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.ds_none {
+  display: none !important;
 }

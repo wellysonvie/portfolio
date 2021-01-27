@@ -19,7 +19,7 @@ html {
 
 ::-webkit-scrollbar {
   width: 8px;
-  height: 3px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,6 +34,32 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #8d8d8d;
+}
+
+.container {
+  padding: 0 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.img-responsive-16by9 {
+  display: block;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.ds_none {
+  display: none !important;
 }
 
 .set-size {
@@ -212,28 +238,6 @@ html {
   transform: rotate(43.2deg);
 }
 
-.container {
-  padding: 0 50px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.btn {
-  padding: 5px 8px;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  outline: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.img-responsive-16by9 {
-  display: block;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-
 .main_header {
   background-color: #222831;
   padding-top: 30px;
@@ -268,10 +272,52 @@ html {
 .main_header .main_header_content .menu ul li a:hover {
   color: #00adb5;
 }
+.main_header .main_header_content .menu_mobile {
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.main_header .main_header_content .menu_mobile i {
+  color: white;
+  font-size: 1.7em;
+}
+.main_header .main_header_content .menu_mobile .menu_mobile_submenu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #222831;
+  padding: 15px 0;
+  border: 1px solid #666;
+}
+.main_header .main_header_content .menu_mobile .menu_mobile_submenu li {
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.main_header .main_header_content .menu_mobile .menu_mobile_submenu li a {
+  color: white;
+  font-weight: 700;
+}
+.main_header .main_header_content .menu_mobile .menu_mobile_submenu li:hover {
+  background-color: #37414f;
+  color: #00adb5;
+}
 .main_header .main_header_content a {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .menu {
+    display: none !important;
+  }
+
+  .menu_mobile {
+    display: block !important;
+  }
+
+  .brand {
+    font-size: 0.9em !important;
+  }
+}
 .main_slide {
   background-image: url("../../assets/images/img-slide.jpg");
   background-position: center;
@@ -383,78 +429,6 @@ html {
   color: white;
 }
 
-.main_contact {
-  padding: 40px 0;
-  background-color: #393e46;
-}
-.main_contact .main_contact_content .main_contact_content_title {
-  border-bottom: 1px solid #f8f9fa;
-  padding: 15px 0;
-  margin-bottom: 30px;
-}
-.main_contact .main_contact_content .main_contact_content_title h1 {
-  color: #f8f9fa;
-  font-size: 2em;
-}
-.main_contact .main_contact_content .main_contact_content_options {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.main_contact .main_contact_content .main_contact_content_options h2 {
-  font-size: 1.1em;
-  color: #f8f9fa;
-  margin-bottom: 15px;
-}
-.main_contact .main_contact_content .main_contact_content_options form {
-  flex-basis: 60%;
-  max-width: 780px;
-  min-width: 600px;
-  margin-bottom: 30px;
-}
-.main_contact .main_contact_content .main_contact_content_options form input,
-.main_contact .main_contact_content .main_contact_content_options form textarea {
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: "Noto Sans", sans-serif;
-}
-.main_contact .main_contact_content .main_contact_content_options form button {
-  padding: 8px 13px;
-  background-color: #222831;
-  color: white;
-  font-weight: bold;
-}
-.main_contact .main_contact_content .main_contact_content_options form button:hover {
-  background-color: #4c596d;
-}
-.main_contact .main_contact_content .main_contact_content_options .social_network {
-  flex-basis: 20%;
-  min-width: 260px;
-}
-.main_contact .main_contact_content .main_contact_content_options .social_network a {
-  text-decoration: none;
-}
-.main_contact .main_contact_content .main_contact_content_options .social_network a img {
-  width: 35px;
-}
-
-.main_footer {
-  padding: 15px 0;
-  background-color: #222831;
-  color: #f8f9fa;
-}
-.main_footer .main_footer_content {
-  text-align: center;
-}
-.main_footer .main_footer_content p {
-  font-size: 0.875em;
-}
-
 .main_about {
   padding: 40px 0;
   background-color: #f8f9fa;
@@ -484,7 +458,6 @@ html {
   border-radius: 50%;
 }
 .main_about .main_about_content .main_about_content_profile p {
-  width: 500px;
   font-size: 1.1em;
   color: #393e46;
   margin-bottom: 20px;
@@ -521,6 +494,94 @@ html {
   font-size: 14px;
 }
 
+.main_contact {
+  padding: 40px 0;
+  background-color: #393e46;
+}
+.main_contact .main_contact_content .main_contact_content_title {
+  border-bottom: 1px solid #f8f9fa;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+.main_contact .main_contact_content .main_contact_content_title h1 {
+  color: #f8f9fa;
+  font-size: 2em;
+}
+.main_contact .main_contact_content .main_contact_content_options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main_contact .main_contact_content .main_contact_content_options h2 {
+  font-size: 1.1em;
+  color: #f8f9fa;
+  margin-bottom: 15px;
+}
+.main_contact .main_contact_content .main_contact_content_options form {
+  flex-basis: 60%;
+  margin-bottom: 30px;
+}
+.main_contact .main_contact_content .main_contact_content_options form input,
+.main_contact .main_contact_content .main_contact_content_options form textarea {
+  width: 100%;
+  max-width: 720px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Noto Sans", sans-serif;
+}
+.main_contact .main_contact_content .main_contact_content_options form textarea {
+  min-height: 100px;
+  min-width: 100%;
+}
+.main_contact .main_contact_content .main_contact_content_options form button {
+  padding: 8px 13px;
+  background-color: #222831;
+  color: white;
+  font-weight: bold;
+}
+.main_contact .main_contact_content .main_contact_content_options form button:hover {
+  background-color: #4c596d;
+}
+.main_contact .main_contact_content .main_contact_content_options .social_network {
+  flex-basis: 20%;
+  min-width: 250px;
+}
+.main_contact .main_contact_content .main_contact_content_options .social_network a {
+  text-decoration: none;
+}
+.main_contact .main_contact_content .main_contact_content_options .social_network a img {
+  width: 35px;
+}
+
+.main_footer {
+  padding: 15px 0;
+  background-color: #222831;
+  color: #f8f9fa;
+}
+.main_footer .main_footer_content {
+  text-align: center;
+}
+.main_footer .main_footer_content p {
+  font-size: 0.875em;
+}
+
+@media (max-width: 768px) {
+  .main_contact_content_options form, .main_contact_content_options .social_network {
+    flex-basis: 100% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .main_portifolio_content_item {
+    flex-basis: 45% !important;
+  }
+}
+@media (max-width: 720px) {
+  .main_portifolio_content_item {
+    flex-basis: 100% !important;
+  }
+}
 body {
   position: relative;
 }
@@ -528,10 +589,11 @@ body {
 .back_to_top {
   position: absolute;
   bottom: 100px;
-  right: 20px;
-  padding: 10px 12px;
-  border-radius: 18px;
+  right: 30px;
+  padding: 10px 15px;
+  border-radius: 50%;
   font-weight: 400;
+  font-size: 1.5em;
   color: #f8f9fa;
   background-color: #222831;
   text-decoration: none;

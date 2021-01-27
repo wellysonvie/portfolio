@@ -129,93 +129,6 @@
     }
 }
 
-.main_contact {
-    padding: 40px 0;
-    background-color: $color-main-secondary;
-
-    .main_contact_content {
-        .main_contact_content_title {
-            border-bottom: 1px solid $color-main-light;
-            padding: 15px 0;
-            margin-bottom: 30px;
-
-            h1 {
-                color: $color-main-light;
-                font-size: 2em;
-            }
-        }
-
-        .main_contact_content_options {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            h2 {
-                font-size: 1.1em;
-                color: $color-main-light;
-                margin-bottom: 15px;
-            }
-
-            form {
-                flex-basis: 60%;
-                max-width: 780px;
-                min-width: 600px;
-                margin-bottom: 30px;
-
-                input,
-                textarea {
-                    width: 100%;
-                    max-width: 100%;
-                    min-width: 100%;
-
-                    padding: 10px;
-                    margin-bottom: 12px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    font-family: $font-family;
-                }
-
-                button {
-                    padding: 8px 13px;
-                    background-color: $color-main-default;
-                    color: white;
-                    font-weight: bold;
-
-                    &:hover {
-                        background-color: lighten($color-main-default, 20%);
-                    }
-                }
-            }
-
-            .social_network {
-                flex-basis: 20%;
-                min-width: 260px;
-
-                a {
-                    text-decoration: none;
-
-                    img {
-                        width: 35px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.main_footer {
-    padding: 15px 0;
-    background-color: $color-main-default;
-    color: $color-main-light;
-
-    .main_footer_content {
-        text-align: center;
-        p {
-            font-size: 0.875em;
-        }
-    }
-}
-
 .main_about {
     padding: 40px 0;
     background-color: $color-main-light;
@@ -250,7 +163,6 @@
             }
 
             p {
-                width: 500px;
                 font-size: 1.1em;
                 color: $color-main-secondary;
                 margin-bottom: 20px;
@@ -294,3 +206,114 @@
         }
     }
 }
+
+.main_contact {
+    padding: 40px 0;
+    background-color: $color-main-secondary;
+
+    .main_contact_content {
+        .main_contact_content_title {
+            border-bottom: 1px solid $color-main-light;
+            padding: 15px 0;
+            margin-bottom: 30px;
+
+            h1 {
+                color: $color-main-light;
+                font-size: 2em;
+            }
+        }
+
+        .main_contact_content_options {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            h2 {
+                font-size: 1.1em;
+                color: $color-main-light;
+                margin-bottom: 15px;
+            }
+
+            form {
+                flex-basis: 60%;
+                margin-bottom: 30px;
+            
+                input,
+                textarea {
+                    width: 100%;
+                    max-width: 720px;
+
+                    padding: 10px;
+                    margin-bottom: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-family: $font-family;
+                }
+
+                textarea {
+                    min-height: 100px;
+                    min-width: 100%;
+                }
+
+                button {
+                    padding: 8px 13px;
+                    background-color: $color-main-default;
+                    color: white;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: lighten($color-main-default, 20%);
+                    }
+                }
+            }
+
+            .social_network {
+                flex-basis: 20%;
+                min-width: 250px;
+
+                a {
+                    text-decoration: none;
+
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main_footer {
+    padding: 15px 0;
+    background-color: $color-main-default;
+    color: $color-main-light;
+
+    .main_footer_content {
+        text-align: center;
+        p {
+            font-size: 0.875em;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .main_contact_content_options {
+        form, .social_network {
+            flex-basis: 100% !important;
+        }
+    } 
+}
+
+@media (max-width: 1024px){
+    .main_portifolio_content_item {
+        flex-basis: 45% !important;
+    }
+}
+
+@media (max-width: 720px){
+    .main_portifolio_content_item {
+        flex-basis: 100% !important;
+    }
+}
+
+
