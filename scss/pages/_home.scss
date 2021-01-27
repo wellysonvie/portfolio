@@ -49,7 +49,7 @@
                 min-width: 300px;
                 margin-bottom: 30px;
                 border: 1px solid rgba(0, 0, 0, 0.125);
-                border-radius: 5px;
+                @include border_radius(5px);
 
                 .main_portifolio_content_item_img {
                     width: 100%;
@@ -97,7 +97,7 @@
                             padding: 3px 6px;
                             margin: 2px;
                             border: 1px solid $color-main-light-blue;
-                            border-radius: 5px;
+                            @include border_radius(5px);
                             color: $color-main-light-blue;
                             font-size: 0.875em;
                         }
@@ -154,11 +154,11 @@
             .profile_img {
                 margin-bottom: 20px;
                 border: 2px solid white;
-                border-radius: 50%;
+                @include border_radius(50%);
 
                 img {
                     width: 160px;
-                    border-radius: 50%;
+                    @include border_radius(50%);
                 }
             }
 
@@ -246,7 +246,7 @@
                     padding: 10px;
                     margin-bottom: 12px;
                     border: 1px solid #ccc;
-                    border-radius: 4px;
+                    @include border_radius(4px);
                     font-family: $font-family;
                 }
 

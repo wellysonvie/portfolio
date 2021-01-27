@@ -24,11 +24,11 @@ html {
 }
 ::-webkit-scrollbar-track {
   background: #ebebeb; 
-  border-radius: 10px;
+  @include border_radius(10px); 
 }
 ::-webkit-scrollbar-thumb {
   background: #bbb;
-  border-radius: 10px;
+  @include border_radius(10px);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(141, 141, 141); 
@@ -44,7 +44,7 @@ html {
 .btn {
   padding: 5px 8px;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  @include border_radius(0.25rem);
   outline: none;
   cursor: pointer;
   transition: 0.2s;

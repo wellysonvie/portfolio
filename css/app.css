@@ -25,11 +25,15 @@ html {
 ::-webkit-scrollbar-track {
   background: #ebebeb;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #bbb;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -46,6 +50,8 @@ html {
   padding: 5px 8px;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
   outline: none;
   cursor: pointer;
   transition: 0.2s;
@@ -95,6 +101,8 @@ html {
   width: 100%;
   border: 0.1em solid #3498db;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   clip: rect(0, 0.5em, 1em, 0);
   left: 0;
   position: absolute;
@@ -103,6 +111,8 @@ html {
 .pie-wrapper .label {
   background: #34495e;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   bottom: 0.4em;
   color: #ecf0f1;
   cursor: default;
@@ -126,6 +136,8 @@ html {
   width: 100%;
   border: 0.1em solid #bdc3c7;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 .pie-wrapper.style-2 .label {
   background: none;
@@ -203,10 +215,14 @@ html {
 
 .pie-wrapper--solid {
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   overflow: hidden;
 }
 .pie-wrapper--solid:before {
   border-radius: 0 100% 100% 0/50%;
+  -moz-border-radius: 0 100% 100% 0/50%;
+  -webkit-border-radius: 0 100% 100% 0/50%;
   content: "";
   display: block;
   height: 100%;
@@ -364,6 +380,8 @@ html {
   margin-bottom: 30px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 .main_portfolio .main_portifolio_content .main_portifolio_content_list .main_portifolio_content_item .main_portifolio_content_item_img {
   width: 100%;
@@ -407,6 +425,8 @@ html {
   margin: 2px;
   border: 1px solid #00adb5;
   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   color: #00adb5;
   font-size: 0.875em;
 }
@@ -452,10 +472,14 @@ html {
   margin-bottom: 20px;
   border: 2px solid white;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 .main_about .main_about_content .main_about_content_profile .profile_img img {
   width: 160px;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 .main_about .main_about_content .main_about_content_profile p {
   font-size: 1.1em;
@@ -529,6 +553,8 @@ html {
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   font-family: "Noto Sans", sans-serif;
 }
 .main_contact .main_contact_content .main_contact_content_options form textarea {
@@ -592,6 +618,8 @@ body {
   right: 30px;
   padding: 10px 15px;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   font-weight: 400;
   font-size: 1.5em;
   color: #f8f9fa;

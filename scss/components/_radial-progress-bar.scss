@@ -81,7 +81,7 @@ $label-font-size-redo: $default-size * 4;
         .half-circle {
             @include size(100%, 100%);
             border: ($default-size / 10) solid #3498db;
-            border-radius: 50%;
+            @include border_radius(50%);
             clip: rect(0, $default-size / 2, $default-size, 0);
             left: 0;
             position: absolute;
@@ -91,7 +91,7 @@ $label-font-size-redo: $default-size * 4;
 
     .label {
         background: $bg-color;
-        border-radius: 50%;
+        @include border_radius(50%);
         bottom: $label-font-size-redo / 10;
         color: #ecf0f1;
         cursor: default;
@@ -115,7 +115,7 @@ $label-font-size-redo: $default-size * 4;
     .shadow {
         @include size(100%, 100%);
         border: $default-size / 10 solid #bdc3c7;
-        border-radius: 50%;
+        @include border_radius(50%);
     }
 
     &.style-2 {
@@ -155,11 +155,11 @@ $label-font-size-redo: $default-size * 4;
 }
 
 .pie-wrapper--solid {
-    border-radius: 50%;
+    @include border_radius(50%);
     overflow: hidden;
 
     &:before {
-        border-radius: 0 100% 100% 0 / 50%;
+        @include border_radius(0 100% 100% 0 / 50%);
         content: "";
         display: block;
         height: 100%;
