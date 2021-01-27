@@ -18,7 +18,11 @@
             color: $color-main-light;
 
             h1 {
-                margin-bottom: 10px;
+                margin-bottom: 12px;
+            }
+
+            p {
+                margin-bottom:7px;
             }
         }
     }
@@ -300,6 +304,10 @@
 @media (max-width: 720px){
     .main_portifolio_content_item {
         flex-basis: 100% !important;
+    }
+
+    .main_slide .main_slide_content .about {
+        font-size: 1em;
     }
 }
 

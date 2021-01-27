@@ -335,16 +335,13 @@ html {
   padding: 15px 0;
   background-color: #222831;
   color: #f8f9fa;
+  position: relative;
 }
 .main_footer .main_footer_content {
   text-align: center;
 }
 .main_footer .main_footer_content p {
   font-size: 0.875em;
-}
-
-body {
-  position: relative;
 }
 
 .back_to_top {
@@ -382,7 +379,10 @@ body {
   color: #f8f9fa;
 }
 .main_slide .main_slide_content .about h1 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+.main_slide .main_slide_content .about p {
+  margin-bottom: 7px;
 }
 
 .main_portfolio {
@@ -622,6 +622,10 @@ body {
 @media (max-width: 720px) {
   .main_portifolio_content_item {
     flex-basis: 100% !important;
+  }
+
+  .main_slide .main_slide_content .about {
+    font-size: 1em;
   }
 }
 
