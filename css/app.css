@@ -279,14 +279,13 @@ html {
   display: flex;
   font-weight: 700;
 }
-.main_header .main_header_content .menu ul li {
-  margin: 0 10px;
-}
 .main_header .main_header_content .menu ul li a {
+  display: block;
+  padding: 10px 15px;
   color: #f8f9fa;
 }
 .main_header .main_header_content .menu ul li a:hover {
-  color: #00adb5;
+  background-color: #37414f;
 }
 .main_header .main_header_content .menu_mobile {
   position: relative;
@@ -305,23 +304,20 @@ html {
   padding: 15px 0;
   border: 1px solid #666;
 }
-.main_header .main_header_content .menu_mobile .menu_mobile_submenu li {
-  padding: 10px 25px;
-  cursor: pointer;
-}
 .main_header .main_header_content .menu_mobile .menu_mobile_submenu li a {
+  display: block;
+  padding: 10px 25px;
   color: white;
   font-weight: 700;
 }
 .main_header .main_header_content .menu_mobile .menu_mobile_submenu li:hover {
   background-color: #37414f;
-  color: #00adb5;
 }
 .main_header .main_header_content a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu {
     display: none !important;
   }
@@ -329,7 +325,8 @@ html {
   .menu_mobile {
     display: block !important;
   }
-
+}
+@media (max-width: 768px) {
   .brand {
     font-size: 0.9em !important;
   }
