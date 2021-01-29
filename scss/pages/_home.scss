@@ -166,10 +166,19 @@
                 }
             }
 
-            p {
+            h2 {
                 font-size: 1.1em;
                 color: $color-main-secondary;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            p {
+                max-width: calc(100% - 200px);
+                min-width: 300px;
+                font-size: 1.1em;
+                color: $color-main-secondary;
+                margin-bottom: 15px;
                 text-align: center;
             }
         }
@@ -182,7 +191,7 @@
             h2 {
                 font-size: 1.1em;
                 color: $color-main-secondary;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 text-align: center;
             }
 
