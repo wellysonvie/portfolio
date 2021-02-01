@@ -357,6 +357,7 @@ html {
   color: #f8f9fa;
   background-color: #222831;
   text-decoration: none;
+  box-shadow: 1px 1px 4px rgba(34, 40, 49, 0.6);
 }
 
 .main_slide {
@@ -445,7 +446,6 @@ html {
 .main_portfolio .main_portifolio_content .main_portifolio_content_list .main_portifolio_content_item .main_portifolio_content_item_body ul {
   margin-top: 20px;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 .main_portfolio .main_portifolio_content .main_portifolio_content_list .main_portifolio_content_item .main_portifolio_content_item_body ul li {
