@@ -12,9 +12,6 @@
 :root {
   font-size: $fontSize;
   font-family: $font-family;
-}
-
-html {
   scroll-behavior: smooth !important;
 }
 
@@ -34,14 +31,14 @@ html {
   background: rgb(141, 141, 141); 
 }
 
+/* CLASSES BASES */
 
 .container {
-  padding: 0 50px;
-  max-width: 1300px;
-  margin: 0 auto;
+  width: min(90vw, 1300px);
+  margin: auto;
 }
 
-.btn {
+%btn {
   padding: 5px 8px;
   border: 1px solid transparent;
   @include border_radius(0.25rem);
