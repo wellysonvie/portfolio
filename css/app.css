@@ -425,6 +425,7 @@
 }
 .main_portifolio_content_list_item_body {
   padding: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 .main_portifolio_content_list_item_body h2 {
   margin-bottom: 10px;
@@ -597,6 +598,7 @@
 .main_contact_content_options form textarea {
   width: 100%;
   max-width: 720px;
+  min-width: 100%;
   padding: 10px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
@@ -607,7 +609,6 @@
 }
 .main_contact_content_options form textarea {
   min-height: 100px;
-  min-width: 100%;
 }
 .main_contact_content_options form .btn_send {
   padding: 8px 13px;
