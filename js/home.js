@@ -21,7 +21,7 @@ $(document).ready(function () {
     const baseUrl = "https://api.github.com";
     let portifolioList = [];
 
-    $.get({url: baseUrl + '/users/wellysonvie/repos', cache: false}, function (repos) {
+    $.get({ url: baseUrl + '/users/wellysonvie/repos', cache: false }, function (repos) {
         repos.forEach(repo => {
             $.get(repo.url + '/contents/.portifolio/config.json', function (config) {
                 $.get(config.download_url, function (data) {
@@ -39,9 +39,15 @@ $(document).ready(function () {
         });
     }).fail(function () {
         portifolioList = JSON.parse(localStorage.getItem('portifolioList'));
-        portifolioList.forEach(item => {
-            addCardPortifolio(item);
-        });
+        if (portifolioList) {
+            portifolioList.forEach(item => {
+                addCardPortifolio(item);
+            });
+        }else{
+            $(".main_portifolio_content_list").html('<p>Nenhum projeto econtrado.</p>');
+        }
+    }).always(function(){
+        $(".load_projects").addClass("ds_none");
     });
 
     function addCardPortifolio(item) {
