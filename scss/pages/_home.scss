@@ -29,7 +29,6 @@
 }
 
 .main_portifolio {
-
   padding: 40px 0;
 
   &_content {
@@ -45,16 +44,18 @@
     }
 
     &_list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 30px;
 
       &_item {
-        flex-basis: 30%;
-        min-width: 300px;
-        margin-bottom: 30px;
+        min-width: 325px;
+        min-height: 520px;
         border: 1px solid rgba(0, 0, 0, 0.125);
         @include border_radius(5px);
+
+        position: relative;
 
         &_img {
           width: 100%;
@@ -86,6 +87,11 @@
             font-size: 0.9em;
             color: $color-main-secondary;
             margin-bottom: 10px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
 
           small {
@@ -109,13 +115,19 @@
         }
 
         &_footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+
           border-top: 1px solid rgba(0, 0, 0, 0.125);
           background-color: rgba(0, 0, 0, 0.03);
           padding: 15px;
+
           display: flex;
           justify-content: space-between;
 
-          .btn_run, .btn_src {
+          .btn_run,
+          .btn_src {
             @extend %btn;
             flex-basis: 45%;
             height: 30px;
@@ -123,7 +135,7 @@
             border-color: lighten($color-main-secondary, 10%);
             color: lighten($color-main-secondary, 10%);
             text-decoration: none;
-            
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -315,14 +327,14 @@
 }
 
 @media (max-width: 1024px) {
-  .main_portifolio_content_list_item {
-    flex-basis: 45% !important;
+  .main_portifolio_content_list{
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 720px) {
-  .main_portifolio_content_list_item {
-    flex-basis: 100% !important;
+  .main_portifolio_content_list{
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 
   .main_slide .main_slide_content .about {
