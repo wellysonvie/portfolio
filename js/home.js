@@ -52,7 +52,7 @@ $(document).ready(function () {
             <div class="main_portifolio_content_list_item_body">
               <h2><a href="#">${title}</a></h2>
               <p>${description}</p>
-              <small>Última atualização: ${created_at.getDate()}/${created_at.getMonth() + 1}/${created_at.getFullYear()}</small>
+              <small>Criado em: ${created_at.getDate()}/${created_at.getMonth() + 1}/${created_at.getFullYear()}</small>
               <ul>
                 ${skills}
               </ul>
