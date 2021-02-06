@@ -18,35 +18,17 @@ $(document).ready(function () {
         }
     });
 
-    const baseUrl = "https://api.github.com";
+    const baseUrl = "https://portifolio-api.herokuapp.com/api";
     let portifolioList = [];
 
-    $.get({ url: baseUrl + '/users/wellysonvie/repos', cache: false }, function (repos) {
-        repos.forEach(repo => {
-            $.get(repo.url + '/contents/.portifolio/config.json', function (config) {
-                $.get(config.download_url, function (data) {
-                    data = JSON.parse(data);
-                    const item = {
-                        ...data,
-                        url_src: repo.html_url,
-                        updated_at: repo.updated_at
-                    }
-                    addCardPortifolio(item);
-                    portifolioList.push(item);
-                    localStorage.setItem('portifolioList', JSON.stringify(portifolioList));
-                });
-            });
+    $.get({ url: baseUrl + '/projects' }, function (data) {
+        portifolioList = data;
+        portifolioList.forEach(item => {
+            addCardPortifolio(item);
         });
     }).fail(function () {
-        portifolioList = JSON.parse(localStorage.getItem('portifolioList'));
-        if (portifolioList) {
-            portifolioList.forEach(item => {
-                addCardPortifolio(item);
-            });
-        }else{
-            $(".main_portifolio_content_list").html('<p>Nenhum projeto econtrado.</p>');
-        }
-    }).always(function(){
+        $(".main_portifolio_content_list").html('<p>Erro ao carregar projetos.</p>');
+    }).always(function () {
         $(".load_projects").addClass("ds_none");
     });
 
@@ -55,10 +37,10 @@ $(document).ready(function () {
         const image = item.image || 'assets/images/default.png';
         const title = item.title;
         const description = item.description;
-        const skills = item.skills.map(skill => { return `<li>${skill}</li>` }).join('');
+        const skills = item.skills.split(',').map(skill => { return `<li>${skill}</li>` }).join('');
         const url_run = item.url_to_run;
         const url_src = item.url_src;
-        const updated_at = new Date(item.updated_at);
+        const created_at = new Date(item.created_at);
 
         $(".main_portifolio_content_list").append(
             `<article class="main_portifolio_content_list_item">
@@ -70,7 +52,7 @@ $(document).ready(function () {
             <div class="main_portifolio_content_list_item_body">
               <h2><a href="#">${title}</a></h2>
               <p>${description}</p>
-              <small>Última atualização: ${updated_at.getDate()}/${updated_at.getMonth() + 1}/${updated_at.getFullYear()}</small>
+              <small>Última atualização: ${created_at.getDate()}/${created_at.getMonth() + 1}/${created_at.getFullYear()}</small>
               <ul>
                 ${skills}
               </ul>
