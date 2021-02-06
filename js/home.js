@@ -43,7 +43,7 @@ $(document).ready(function () {
         const created_at = new Date(item.created_at);
 
         $(".main_portifolio_content_list").append(
-            `<article class="main_portifolio_content_list_item">
+            `<article class="main_portifolio_content_list_item" id="project-${item.id}" style="display:none;">
             <div class="main_portifolio_content_list_item_img">
               <a href="#">
                 <img src="${image}" alt="Imagem do projeto">
@@ -63,6 +63,8 @@ $(document).ready(function () {
             </div>
           </article>`
         );
+
+        $("#project-"+item.id).fadeIn("slow");
     }
 
     $("#contactForm").submit(function (event) {
