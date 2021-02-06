@@ -76,11 +76,9 @@ $(document).ready(function () {
         $(".sending_msg").removeClass("ds_none success error");
 
         $.post(baseUrl + '/contact', $("#contactForm").serialize(), function (data) {
-            console.log(data);
             $("#name").val("");
             $("#email").val("");
             $("#message").val("");
-
             $(".sending_msg").addClass("success");
             $(".sending_msg").text("Mensagem enviada com sucesso!");
         }).fail(function () {
