@@ -64,4 +64,28 @@ $(document).ready(function () {
           </article>`
         );
     }
+
+    $("#contactForm").submit(function (event) {
+        event.preventDefault();
+    });
+
+    $(".btn_send").on('click', function (event) {
+
+        $("#contactForm").submit();
+        $(".sending_msg").text("Enviando...");
+        $(".sending_msg").removeClass("ds_none success error");
+
+        $.post(baseUrl + '/contact', $("#contactForm").serialize(), function (data) {
+            console.log(data);
+            $("#name").val("");
+            $("#email").val("");
+            $("#message").val("");
+
+            $(".sending_msg").addClass("success");
+            $(".sending_msg").text("Mensagem enviada com sucesso!");
+        }).fail(function () {
+            $(".sending_msg").addClass("error");
+            $(".sending_msg").text("Ocorreu um erro ao enviar a mensagem!");
+        });
+    });
 });

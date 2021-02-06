@@ -619,6 +619,17 @@
 .main_contact_content_options form .btn_send:hover {
   background-color: #4c596d;
 }
+.main_contact_content_options form .sending_msg {
+  color: #00adb5;
+  font-size: 1em;
+  font-weight: bold;
+}
+.main_contact_content_options form .sending_msg.success {
+  color: #01a001;
+}
+.main_contact_content_options form .sending_msg.error {
+  color: #ff6262;
+}
 .main_contact_content_options_social_network {
   flex-basis: 20%;
   min-width: 250px;

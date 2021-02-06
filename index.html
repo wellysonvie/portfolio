@@ -218,12 +218,12 @@
           <h1>Contato</h1>
         </div>
         <div class="main_contact_content_options">
-          <form action="" method="post">
-            <h2><i class="fas fa-envelope"></i> Envie um email</h2>
-            <input type="text" name="name" id="name" placeholder="Seu nome">
-            <input type="email" name="email" id="email" placeholder="Seu e-mail principal">
-            <textarea name="message" id="message" rows="5" placeholder="Escreva sua mensagem..."></textarea>
-            <button type="submit" class="btn_send">Enviar</button>
+          <form id="contactForm" action="" method="post">
+            <h2><i class="fas fa-paper-plane"></i> Envie uma mensagem</h2>
+            <input type="text" name="name" id="name" placeholder="Seu nome" required>
+            <input type="email" name="email" id="email" placeholder="Seu e-mail principal" required>
+            <textarea name="message" id="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+            <button type="submit" class="btn_send">Enviar</button>&nbsp;<span class="sending_msg ds_none"></span>
           </form>
 
           <div class="main_contact_content_options_social_network">

@@ -297,6 +297,20 @@
             background-color: lighten($color-main-default, 20%);
           }
         }
+
+        .sending_msg {
+          color: $color-main-light-blue;
+          font-size: 1em;
+          font-weight: bold;
+
+          &.success {
+            color: $color-main-success;
+          }
+
+          &.error {
+            color: $color-main-error;
+          }
+        }
       }
 
       &_social_network {
