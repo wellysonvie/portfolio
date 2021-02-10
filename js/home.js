@@ -58,13 +58,19 @@ $(document).ready(function () {
               </ul>
             </div>
             <div class="main_portifolio_content_list_item_footer">
-              <a class="btn_run" href="${url_run}" target="_blank"><i class="far fa-play-circle"></i>&nbsp;Executar</a>
-              <a class="btn_src" href="${url_src}" target="_blank"><i class="fas fa-code"></i>&nbsp;Código-fonte</a>
+              <a class="btn_run" href="${url_run}" target="_blank"
+                ${url_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                <i class="far fa-play-circle"></i>&nbsp;Executar
+              </a>
+              <a class="btn_src" href="${url_src}" target="_blank" 
+                ${url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                <i class="fas fa-code"></i>&nbsp;Código-fonte
+              </a>
             </div>
           </article>`
         );
 
-        $("#project-"+item.id).fadeIn("slow");
+        $("#project-" + item.id).fadeIn("slow");
     }
 
     $("#contactForm").submit(function (event) {
