@@ -72,11 +72,11 @@ $(document).ready(function () {
             </div>
             <div class="main_portifolio_content_list_item_footer">
               <a class="btn_run" href="${project.url_to_run}" target="_blank"
-                ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
                 <i class="far fa-play-circle"></i>&nbsp;Executar
               </a>
               <a class="btn_src" href="${project.url_src}" target="_blank" 
-                ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
                 <i class="fas fa-code"></i>&nbsp;Código-fonte
               </a>
             </div>
@@ -132,11 +132,11 @@ $(document).ready(function () {
                 </div>
                 <div class="project_modal_content_description_footer">
                     <a class="btn_run" href="${project.url_to_run}" target="_blank"
-                        ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                        ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
                         <i class="far fa-play-circle"></i>&nbsp;Executar
                     </a>
                     <a class="btn_src" href="${project.url_src}" target="_blank" 
-                        ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;'" : ""}>
+                        ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
                         <i class="fas fa-code"></i>&nbsp;Código-fonte
                     </a>
                 </div>
