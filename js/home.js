@@ -40,7 +40,7 @@ $(document).ready(function () {
         const skills = item.skills.split(',').map(skill => { return `<li>${skill}</li>` }).join('');
         const url_run = item.url_to_run;
         const url_src = item.url_src;
-        const created_at = new Date(item.created_at);
+        const created_at = new Date(item.created_at).toLocaleString([], { year: 'numeric', month: 'long' });
 
         $(".main_portifolio_content_list").append(
             `<article class="main_portifolio_content_list_item" id="project-${item.id}" style="display:none;">
@@ -52,7 +52,7 @@ $(document).ready(function () {
             <div class="main_portifolio_content_list_item_body">
               <h2><a href="#">${title}</a></h2>
               <p>${description}</p>
-              <small>Criado em: ${created_at.getDate()}/${created_at.getMonth() + 1}/${created_at.getFullYear()}</small>
+              <small>Criado em: ${created_at}</small>
               <ul>
                 ${skills}
               </ul>
