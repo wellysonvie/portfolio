@@ -422,6 +422,10 @@
   border-top-right-radius: 5px;
   vertical-align: middle;
   border-style: none;
+  transition: 0.2s;
+}
+.main_portifolio_content_list_item_img img:hover {
+  opacity: 0.8;
 }
 .main_portifolio_content_list_item_body {
   padding: 15px;
@@ -434,6 +438,10 @@
   font-size: 0.9em;
   color: #222831;
   text-decoration: none;
+  transition: 0.2s;
+}
+.main_portifolio_content_list_item_body h2 a:hover {
+  color: #4c596d;
 }
 .main_portifolio_content_list_item_body p {
   font-size: 0.9em;

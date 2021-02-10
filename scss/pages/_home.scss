@@ -68,6 +68,12 @@
             border-top-right-radius: 5px;
             vertical-align: middle;
             border-style: none;
+
+            transition: 0.2s;
+
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
 
@@ -81,6 +87,12 @@
               font-size: 0.9em;
               color: $color-main-default;
               text-decoration: none;
+
+              transition: 0.2s;
+
+              &:hover {
+                color: lighten($color-main-default, 20%);
+              }
             }
           }
 
