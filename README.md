@@ -1,5 +1,5 @@
 # Portfólio
-Site simples para apresentar portifólio.<br>
+Site simples para apresentar portfólio.<br>
 Executar: https://wellysonvie.github.io/portifolio/
 
 ## API
