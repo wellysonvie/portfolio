@@ -1,6 +1,6 @@
 # Portfólio
 Site simples para apresentar portfólio.<br>
-Executar: https://wellysonvie.github.io/portifolio/
+Executar: https://wellysonvie.github.io/portfolio/
 
 ## API
-https://github.com/wellysonvie/portifolio-api
+https://github.com/wellysonvie/portfolio-api
