@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
     });
 
-    const baseUrl = "https://portifolio-api.herokuapp.com/api";
+    const baseUrl = "https://wellysonvie-portfolio-api.herokuapp.com/api";
     let portfolioList = [];
 
     $.get({ url: baseUrl + '/projects' }, function (data) {
