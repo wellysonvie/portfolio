@@ -28,7 +28,7 @@
   }
 }
 
-.main_portifolio {
+.main_portfolio {
   padding: 40px 0;
 
   &_content {
@@ -496,7 +496,7 @@
 }
 
 @media (max-width: 1024px) {
-  .main_portifolio_content_list {
+  .main_portfolio_content_list {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
@@ -528,7 +528,7 @@
 }
 
 @media (max-width: 720px) {
-  .main_portifolio_content_list {
+  .main_portfolio_content_list {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 

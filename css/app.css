@@ -44,8 +44,8 @@
 }
 
 .project_modal_content_description_footer .btn_run,
-.project_modal_content_description_footer .btn_src, .main_contact_content_options form .btn_send, .main_portifolio_content_list_item_footer .btn_run,
-.main_portifolio_content_list_item_footer .btn_src {
+.project_modal_content_description_footer .btn_src, .main_contact_content_options form .btn_send, .main_portfolio_content_list_item_footer .btn_run,
+.main_portfolio_content_list_item_footer .btn_src {
   padding: 5px 8px;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -385,25 +385,25 @@
   margin-bottom: 7px;
 }
 
-.main_portifolio {
+.main_portfolio {
   padding: 40px 0;
 }
-.main_portifolio_content_title {
+.main_portfolio_content_title {
   border-bottom: 1px solid #343e5c;
   padding: 15px 0;
   margin-bottom: 30px;
 }
-.main_portifolio_content_title h1 {
+.main_portfolio_content_title h1 {
   color: #343e5c;
   font-size: 2em;
 }
-.main_portifolio_content_list {
+.main_portfolio_content_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 30px;
 }
-.main_portifolio_content_list_item {
+.main_portfolio_content_list_item {
   min-width: 325px;
   min-height: 520px;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -412,10 +412,10 @@
   -webkit-border-radius: 5px;
   position: relative;
 }
-.main_portifolio_content_list_item_img {
+.main_portfolio_content_list_item_img {
   width: 100%;
 }
-.main_portifolio_content_list_item_img img {
+.main_portfolio_content_list_item_img img {
   height: 230px;
   width: 100%;
   object-fit: cover;
@@ -425,26 +425,26 @@
   border-style: none;
   transition: 0.2s;
 }
-.main_portifolio_content_list_item_img img:hover {
+.main_portfolio_content_list_item_img img:hover {
   opacity: 0.8;
 }
-.main_portifolio_content_list_item_body {
+.main_portfolio_content_list_item_body {
   padding: 15px;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
-.main_portifolio_content_list_item_body h2 {
+.main_portfolio_content_list_item_body h2 {
   margin-bottom: 10px;
 }
-.main_portifolio_content_list_item_body h2 a {
+.main_portfolio_content_list_item_body h2 a {
   font-size: 0.9em;
   color: #222831;
   text-decoration: none;
   transition: 0.2s;
 }
-.main_portifolio_content_list_item_body h2 a:hover {
+.main_portfolio_content_list_item_body h2 a:hover {
   color: #4c596d;
 }
-.main_portifolio_content_list_item_body p {
+.main_portfolio_content_list_item_body p {
   font-size: 0.9em;
   color: #393e46;
   margin-bottom: 10px;
@@ -453,15 +453,15 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.main_portifolio_content_list_item_body small {
+.main_portfolio_content_list_item_body small {
   color: #666;
 }
-.main_portifolio_content_list_item_body ul {
+.main_portfolio_content_list_item_body ul {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
-.main_portifolio_content_list_item_body ul li {
+.main_portfolio_content_list_item_body ul li {
   padding: 3px 6px;
   margin: 2px;
   border: 1px solid #00adb5;
@@ -471,7 +471,7 @@
   color: #00adb5;
   font-size: 0.875em;
 }
-.main_portifolio_content_list_item_footer {
+.main_portfolio_content_list_item_footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -481,8 +481,8 @@
   display: flex;
   justify-content: space-between;
 }
-.main_portifolio_content_list_item_footer .btn_run,
-.main_portifolio_content_list_item_footer .btn_src {
+.main_portfolio_content_list_item_footer .btn_run,
+.main_portfolio_content_list_item_footer .btn_src {
   flex-basis: 45%;
   height: 30px;
   background-color: #fff;
@@ -493,12 +493,12 @@
   align-items: center;
   justify-content: center;
 }
-.main_portifolio_content_list_item_footer .btn_run:hover,
-.main_portifolio_content_list_item_footer .btn_src:hover {
+.main_portfolio_content_list_item_footer .btn_run:hover,
+.main_portfolio_content_list_item_footer .btn_src:hover {
   background-color: #505762;
   color: white;
 }
-.main_portifolio_content_list_item .show_modal {
+.main_portfolio_content_list_item .show_modal {
   cursor: pointer;
 }
 
@@ -776,7 +776,7 @@
   }
 }
 @media (max-width: 1024px) {
-  .main_portifolio_content_list {
+  .main_portfolio_content_list {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
@@ -802,7 +802,7 @@
   }
 }
 @media (max-width: 720px) {
-  .main_portifolio_content_list {
+  .main_portfolio_content_list {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 

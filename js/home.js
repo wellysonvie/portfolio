@@ -24,26 +24,26 @@ $(document).ready(function () {
     });
 
     const baseUrl = "https://portifolio-api.herokuapp.com/api";
-    let portifolioList = [];
+    let portfolioList = [];
 
     $.get({ url: baseUrl + '/projects' }, function (data) {
-        portifolioList = data;
-        portifolioList.forEach((item, index) => {
-            addCardPortifolio(getItemProject(index), index);
+        portfolioList = data;
+        portfolioList.forEach((item, index) => {
+            addCardportfolio(getItemProject(index), index);
         });
 
         $(".show_modal").on('click', function () {
             showModal($(this));
         });
     }).fail(function () {
-        $(".main_portifolio_content_list").html('<p>Erro ao carregar projetos.</p>');
+        $(".main_portfolio_content_list").html('<p>Erro ao carregar projetos.</p>');
     }).always(function () {
         $(".load_projects").addClass("ds_none");
     });
 
 
     function getItemProject(projectId) {
-        let project = portifolioList[projectId];
+        let project = portfolioList[projectId];
 
         return {
             ...project,
@@ -53,16 +53,16 @@ $(document).ready(function () {
         };
     }
 
-    function addCardPortifolio(project, index) {
+    function addCardportfolio(project, index) {
 
-        $(".main_portifolio_content_list").append(
-            `<article class="main_portifolio_content_list_item" id="project-${project.id}" style="display:none;">
-            <div class="main_portifolio_content_list_item_img">
+        $(".main_portfolio_content_list").append(
+            `<article class="main_portfolio_content_list_item" id="project-${project.id}" style="display:none;">
+            <div class="main_portfolio_content_list_item_img">
               <a class="show_modal" data-projectidx="${index}">
                 <img src="${project.image}" alt="Imagem do projeto">
               </a>
             </div>
-            <div class="main_portifolio_content_list_item_body">
+            <div class="main_portfolio_content_list_item_body">
               <h2><a class="show_modal" data-projectidx="${index}">${project.title}</a></h2>
               <p>${project.description}</p>
               <small>Criado em: ${project.created_at}</small>
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 ${project.skills}
               </ul>
             </div>
-            <div class="main_portifolio_content_list_item_footer">
+            <div class="main_portfolio_content_list_item_footer">
               <a class="btn_run" href="${project.url_to_run}" target="_blank"
                 ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
                 <i class="far fa-play-circle"></i>&nbsp;Executar
