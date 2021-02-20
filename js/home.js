@@ -26,7 +26,7 @@ $(document).ready(function () {
     const baseUrl = "https://wellysonvie-portfolio-api.herokuapp.com/api";
     let portfolioList = [];
 
-    $.get({ url: baseUrl + '/projects' }, function (data) {
+    $.get({ url: './js/projects.json' }, function (data) {
         portfolioList = data;
         portfolioList.forEach((item, index) => {
             addCardportfolio(getItemProject(index), index);
