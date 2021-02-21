@@ -13,9 +13,10 @@
 }
 
 .back_to_top {
-  position: absolute;
-  bottom: 100px;
-  right: 30px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
   padding: 10px 15px;
   @include border_radius(50%);
   font-weight: 400;
@@ -24,4 +25,5 @@
   background-color: $color-main-default;
   text-decoration: none;
   box-shadow: 1px 1px 4px rgba($color: $color-main-default, $alpha: 0.6);
+  border: 1px solid lighten($color: $color-main-default, $amount: 10%);
 }

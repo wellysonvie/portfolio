@@ -344,9 +344,10 @@
 }
 
 .back_to_top {
-  position: absolute;
-  bottom: 100px;
-  right: 30px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
   padding: 10px 15px;
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -357,6 +358,7 @@
   background-color: #222831;
   text-decoration: none;
   box-shadow: 1px 1px 4px rgba(34, 40, 49, 0.6);
+  border: 1px solid #37414f;
 }
 
 .main_slide {

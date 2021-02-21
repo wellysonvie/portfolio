@@ -23,6 +23,10 @@ $(document).ready(function () {
         }
     });
 
+    $(this).scroll(function() {
+        $(".back_to_top").toggle($(this).scrollTop() > 200);
+    });
+
     const baseUrl = "https://wellysonvie-portfolio-api.herokuapp.com/api";
     let portfolioList = [];
 
