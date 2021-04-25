@@ -2,7 +2,7 @@
   {
     "id": 12,
     "title": "move.it",
-    "description": "Projeto desenvolvido na trilha de ReactJS da NLW#4 - RocketSeat.<br>Consiste em contador de tempo com intervalos de 25 minutos, que no fim de cada intervalo é proposto um desafio aleatório, que envolve exércicios para os olhos ou corpo, e ao completar o desafio, o usuário ganha pontos de experiência e pode subir de nível.",
+    "description": "Projeto desenvolvido na trilha de ReactJS da NLW#4 - RocketSeat.<br><br>Consiste em contador de tempo com intervalos de 25 minutos, que no fim de cada intervalo é proposto um desafio aleatório, que envolve exércicios para os olhos ou corpo, e ao completar o desafio, o usuário ganha pontos de experiência e pode subir de nível.",
     "skills": "HTML5,CSS3,ReactJS,Next.js",
     "image": "https://raw.githubusercontent.com/wellysonvie/NLW-4/main/public/screenshot.png",
     "url_to_run": "https://moveit-steel-eight.vercel.app",

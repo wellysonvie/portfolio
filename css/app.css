@@ -436,15 +436,16 @@
 }
 .main_portfolio_content_list_item_body h2 {
   margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #343e5c;
 }
 .main_portfolio_content_list_item_body h2 a {
-  font-size: 0.9em;
-  color: #222831;
   text-decoration: none;
   transition: 0.2s;
 }
 .main_portfolio_content_list_item_body h2 a:hover {
-  color: #4c596d;
+  color: #505f8d;
+  text-decoration: underline;
 }
 .main_portfolio_content_list_item_body p {
   font-size: 0.9em;
@@ -717,8 +718,8 @@
 }
 .project_modal_content_description_body h2 {
   margin-bottom: 10px;
-  font-size: 1.8em;
-  color: #222831;
+  font-size: 2em;
+  color: #343e5c;
 }
 .project_modal_content_description_body p {
   font-size: 1.1em;

@@ -83,15 +83,17 @@
 
           h2 {
             margin-bottom: 10px;
+            font-size: 1.25em;
+            color: $color-font-default;
+
             a {
-              font-size: 0.9em;
-              color: $color-main-default;
               text-decoration: none;
 
               transition: 0.2s;
 
               &:hover {
-                color: lighten($color-main-default, 20%);
+                color: lighten($color-font-default, 15%);
+                text-decoration: underline;
               }
             }
           }
@@ -420,8 +422,8 @@
 
         h2 {
           margin-bottom: 10px;
-          font-size: 1.8em;
-          color: $color-main-default;
+          font-size: 2em;
+          color: $color-font-default;
         }
 
         p {
