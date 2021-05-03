@@ -255,8 +255,7 @@
 
 .main_header {
   background-color: #222831;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 18px 0;
 }
 .main_header_content {
   display: flex;
@@ -264,7 +263,7 @@
   align-items: center;
 }
 .main_header_content .brand {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 700;
 }
 .main_header_content .brand h1 {
