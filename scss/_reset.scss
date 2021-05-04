@@ -66,21 +66,21 @@ button {
   cursor: pointer;
 }
 
-/* ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
-::-webkit-scrollbar-track {
-  background: #ebebeb;
+/* ::-webkit-scrollbar-track {
+  background: $color-gray;
   @include border_radius(10px);
-}
+} */
 ::-webkit-scrollbar-thumb {
-  background: #bbb;
-  @include border_radius(10px);
+  background: $color-dark-50;
+  @include border_radius(2px);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(141, 141, 141);
-} */
+  background: $color-dark-50;
+}
 
 %btn {
   padding: 5px 8px;
