@@ -30,7 +30,7 @@ body,
 input,
 textarea,
 button {
-  font: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: #e1e1e6;
@@ -43,7 +43,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: Lexend, sans-serif;
+  font-family: "Lexend", sans-serif;
   color: #fff;
 }
 
@@ -53,6 +53,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
 }
 
 button {
@@ -83,6 +87,109 @@ button {
 
 .ds_none {
   display: none !important;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container_sidebar {
+  width: 40%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container_sidebar img {
+  width: 9rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  object-fit: cover;
+}
+.container_sidebar h1 {
+  margin-bottom: 1.5rem;
+  background: -webkit-linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container_sidebar p {
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.container_sidebar ul {
+  margin-top: auto;
+  padding-top: 2rem;
+  display: flex;
+}
+.container_sidebar ul li {
+  margin-right: 2.5rem;
+}
+.container_sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.container_main {
+  flex: 1;
+  overflow: auto;
+  padding: 4rem 4rem 0 4rem;
+}
+.container_main_projects h2 {
+  margin-bottom: 2rem;
+  background: -webkit-linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container_main_projects_card {
+  width: 100%;
+  height: 12rem;
+  padding: 1.8rem;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #202024;
+  border-bottom: 2px solid #80d0c7;
+  cursor: pointer;
+  display: flex;
+  transition: background-color 0.2s;
+}
+.container_main_projects_card img {
+  width: 10rem;
+  margin-right: 1.6rem;
+  object-fit: cover;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.container_main_projects_card_details {
+  height: 100%;
+}
+.container_main_projects_card_details h3 {
+  margin-bottom: 0.8rem;
+}
+.container_main_projects_card_details p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.container_main_projects_card_details .created_at {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 2rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #fff;
+}
+.container_main_projects_card:hover {
+  background-color: #29292e;
 }
 
 /*# sourceMappingURL=app.css.map */

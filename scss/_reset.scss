@@ -33,7 +33,7 @@ body,
 input,
 textarea,
 button {
-  font: $font-family-secondary;
+  font-family: $font-family-secondary;
   font-weight: 500;
   font-size: 1rem;
   color: $color-gray;
@@ -56,6 +56,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
 }
 
 button {
