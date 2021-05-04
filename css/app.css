@@ -30,7 +30,7 @@ body,
 input,
 textarea,
 button {
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: #e1e1e6;
@@ -43,7 +43,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: "Lexend", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #fff;
 }
 
@@ -149,6 +149,7 @@ button {
   width: 100%;
   height: 12rem;
   padding: 1.8rem;
+  margin-bottom: 1.5rem;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -156,7 +157,7 @@ button {
   border-bottom: 2px solid #80d0c7;
   cursor: pointer;
   display: flex;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 .container_main_projects_card img {
   width: 10rem;
@@ -190,6 +191,7 @@ button {
 }
 .container_main_projects_card:hover {
   background-color: #29292e;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=app.css.map */
