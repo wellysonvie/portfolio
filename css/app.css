@@ -570,15 +570,21 @@
 }
 .main_about_content_skills ul li {
   flex-basis: 20%;
-  font-size: 4em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 12px;
+  margin: 12px;
 }
-.main_about_content_skills ul li .skill_name {
-  margin-top: -5px;
-  font-size: 14px;
+.main_about_content_skills ul li .skill {
+  padding: 8px 12px;
+  min-width: 60px;
+  border-radius: 25px;
+  border: 2px solid #b8bdc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_about_content_skills ul li .skill .skill_name {
+  font-size: 15px;
+  font-weight: bold;
+  color: #8e96a3;
 }
 
 .main_contact {
