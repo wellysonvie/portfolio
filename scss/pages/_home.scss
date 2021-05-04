@@ -1,12 +1,14 @@
 .container {
   height: 100vh;
+  width: min(90vw, 1300px);
+  margin: auto;
 
   display: flex;
 
   &_sidebar {
     width: 40%;
     height: 100%;
-    padding: 4rem;
+    padding: 4rem 2rem;
 
     display: flex;
     flex-direction: column;
@@ -21,6 +23,7 @@
 
     h1 {
       margin-bottom: 1.5rem;
+      font-size: 2.5rem;
 
       background: -webkit-linear-gradient(160deg, $color-blue 0%, $color-blue-50 100%);
       -webkit-background-clip: text;
@@ -31,6 +34,7 @@
       text-align: left;
       font-size: 0.9rem;
       line-height: 1.7;
+      color: $color-gray;
     }
 
     ul {
@@ -55,7 +59,7 @@
   &_main {
     flex: 1;
     overflow: auto;
-    padding: 4rem 4rem 0 4rem;
+    padding: 4rem 2rem 0 4rem;
 
     &_projects {
       h2 {
@@ -95,6 +99,7 @@
           p {
             font-size: 0.9rem;
             line-height: 1.6;
+            color: $color-gray;
 
             display: -webkit-box;
             -webkit-line-clamp: 2;
