@@ -35,9 +35,14 @@
       font-size: 0.9rem;
       line-height: 1.7;
       color: $color-gray;
+
+      span {
+        filter: brightness(140%);
+        font-weight: 700;
+      }
     }
 
-    ul {
+    .contacts {
       margin-top: auto;
       padding-top: 2rem;
 
@@ -85,15 +90,15 @@
 
     position: relative;
 
+    h2 {
+      margin-bottom: 2rem;
+
+      background: -webkit-linear-gradient(160deg, $color-blue 0%, $color-blue-50 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     &_projects {
-      h2 {
-        margin-bottom: 2rem;
-
-        background: -webkit-linear-gradient(160deg, $color-blue 0%, $color-blue-50 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
       display: flex;
       flex-direction: column;
 
