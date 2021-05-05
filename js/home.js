@@ -25,3 +25,7 @@ fetch('./js/projects.json')
     }, '');
   });
 
+document.querySelector('.btn_close_modal').addEventListener('click', function () {
+  document.querySelector('.modal_overlay').style.display = 'none';
+});
+

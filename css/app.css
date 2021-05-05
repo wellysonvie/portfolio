@@ -273,6 +273,29 @@ button {
   height: 2.5em;
 }
 
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal_overlay .btn_close_modal {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  color: #8a8f98;
+  font-weight: 300;
+  font-size: 4.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal_overlay .btn_close_modal:hover {
+  color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
