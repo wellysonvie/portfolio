@@ -273,4 +273,22 @@ button {
   height: 2.5em;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .container_sidebar {
+    width: 100%;
+    padding: 3rem 0 1rem 0;
+  }
+  .container_main {
+    width: 100%;
+    padding: 0;
+  }
+  .container_main_projects_card:hover {
+    transform: scale(1);
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -202,3 +202,24 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+
+    &_sidebar {
+      width: 100%;
+      padding: 3rem 0 1rem 0;
+    }
+
+    &_main {
+      width: 100%;
+      padding: 0;
+
+      &_projects_card:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
