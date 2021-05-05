@@ -83,7 +83,7 @@ button {
 }
 
 %btn {
-  padding: 5px 8px;
+  padding: 0.3rem 0.5rem;
   border: 1px solid transparent;
   @include border_radius(0.25rem);
   outline: none;

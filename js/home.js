@@ -26,6 +26,11 @@ fetch('./js/projects.json')
   });
 
 document.querySelector('.btn_close_modal').addEventListener('click', function () {
-  document.querySelector('.modal_overlay').style.display = 'none';
+  document.querySelector('.modal_overlay').classList.add('ds_none');
+});
+
+document.querySelector('.btn_open_send_message_modal').addEventListener('click', function () {
+  document.querySelector('.modal_overlay').classList.remove('ds_none');
+  document.querySelector('.send_message_modal').classList.remove('ds_none');
 });
 
