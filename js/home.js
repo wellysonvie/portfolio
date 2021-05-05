@@ -17,7 +17,6 @@ fetch('./js/projects.json')
             </div>
             <p>${project.description}</p>
             <ul>
-              <li><i class="fas fa-tags"></i></li>
               ${project.skills.split(',').map(skill => `<li>${skill}</li>`).join('')}
             </ul>
           </div>

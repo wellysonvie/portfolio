@@ -155,10 +155,11 @@ button {
   background-color: #202024;
   color: #fff;
   font-size: 0.8rem;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 .container_sidebar ul li:last-child button:hover {
   background-color: #29292e;
+  color: #fff;
 }
 .container_main {
   flex: 1;
@@ -181,13 +182,13 @@ button {
 .container_main_projects_card {
   flex-basis: 100%;
   min-height: 13rem;
-  padding: 1.8rem;
+  padding: 1.6rem;
   margin-bottom: 1.5rem;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   background-color: #202024;
-  border-bottom: 2.5px solid #80d0c7;
+  border-bottom: 2px solid #80d0c7;
   cursor: pointer;
   display: flex;
   transition: all 0.2s ease-in-out;
@@ -243,20 +244,14 @@ button {
 .container_main_projects_card_details ul li {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  padding: 0.1rem 0.25rem;
-  border: 1px dotted #80d0c7;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  color: #80d0c7;
-  font-weight: 400;
-  font-size: 0.85rem;
-}
-.container_main_projects_card_details ul li:first-child {
-  margin-right: 0.3rem;
-  border: 0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #121214;
   color: #8a8f98;
-  font-size: 0.7rem;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 .container_main_projects_card:hover {
   background-color: #29292e;

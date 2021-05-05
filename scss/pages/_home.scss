@@ -64,10 +64,11 @@
             color: $color-white;
             font-size: 0.8rem;
 
-            transition: background-color 0.2s;
+            transition: all 0.2s;
 
             &:hover {
               background-color: $color-dark-30;
+              color: $color-white;
             }
           }
         }
@@ -99,11 +100,11 @@
       &_card {
         flex-basis: 100%;
         min-height: 13rem;
-        padding: 1.8rem;
+        padding: 1.6rem;
         margin-bottom: 1.5rem;
         @include border_radius(5px);
         background-color: $color-dark-50;
-        border-bottom: 2.5px solid $color-blue-50;
+        border-bottom: 2px solid $color-blue-50;
         cursor: pointer;
 
         display: flex;
@@ -164,19 +165,12 @@
             li {
               margin-right: 0.5rem;
               margin-bottom: 0.5rem;
-              padding: 0.1rem 0.25rem;
-              border: 1px dotted $color-blue-50;
-              @include border_radius(3px);
-              color: $color-blue-50;
+              padding: 0.3rem 0.5rem;
+              @include border_radius(10px);
+              background-color: $color-dark;
+              color: $color-gray;
               font-weight: 400;
-              font-size: 0.85rem;
-
-              &:first-child {
-                margin-right: 0.3rem;
-                border: 0;
-                color: $color-gray;
-                font-size: 0.7rem;
-              }
+              font-size: 0.8rem;
             }
           }
         }
