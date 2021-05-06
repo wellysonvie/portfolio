@@ -94,3 +94,33 @@ function renderProjectInModal(project) {
   `;
 }
 
+document.querySelector('.btn_send_message').addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const status = {
+    200: '<span class="success">Sua mensagem foi enviada com sucesso!</span>',
+    400: '<span class="error">E-mail inválido ou nome e mensagem vazios!</span>',
+    500: '<span class="error">Desculpe. Ocorreu um erro ao tentar enviar sua mensagem!</span>'
+  };
+
+  const messageStatus = document.querySelector('.message_status');
+
+  messageStatus.innerText = 'Aguarde...';
+  messageStatus.classList.remove('ds_none');
+
+  const sendMessageForm = document.forms.sendMessageForm;
+
+  fetch("https://wellysonvie-portfolio-api.herokuapp.com/api/contact", {
+    method: "POST",
+    body: new FormData(sendMessageForm)
+  }).then(response => {
+    messageStatus.innerHTML = status[response.status];
+    if (response.status === 200) {
+      sendMessageForm.name.value = '';
+      sendMessageForm.email.value = '';
+      sendMessageForm.message.value = '';
+    }
+  }).catch(error => {
+    messageStatus.innerHTML = status[500];
+  });
+});

@@ -62,13 +62,17 @@
     <span class="btn_close_modal">&times;</span>
 
     <div class="send_message_modal ds_none">
-      <form id="contactForm" action="" method="post" autocomplete="off">
+      <form name="sendMessageForm" action="" method="post" autocomplete="off">
         <h2>Envie uma mensagem</h2>
         <input type="text" name="name" id="name" placeholder="Seu nome" required autocomplete="no">
         <input type="email" name="email" id="email" placeholder="Seu e-mail principal" required>
         <textarea name="message" id="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
-        <button type="submit" class="btn_send"><i class="fas fa-paper-plane"></i>&nbsp;Enviar</button>&nbsp;<span
-          class="sending_msg ds_none"></span>
+        <div>
+          <button type="submit" class="btn_send_message">
+            <i class="fas fa-paper-plane"></i>&nbsp;Enviar
+          </button>
+          <p class="message_status ds_none"></p>
+        </div>
       </form>
     </div>
 

@@ -273,36 +273,42 @@
         max-height: 12rem;
       }
 
-      .btn_send {
-        @extend %btn;
-        padding: 0.6rem 1rem;
-        @include border_radius(5px);
-        background-color: $color-dark-50;
-        color: $color-white;
-        font-weight: 700;
-        font-size: 0.9rem;
+      div {
+        display: flex;
+        align-items: center;
 
-        i {
-          margin-right: 0.2rem;
+        .btn_send_message {
+          @extend %btn;
+          padding: 0.6rem 1rem;
+          @include border_radius(5px);
+          background-color: $color-dark-50;
+          color: $color-white;
+          font-weight: 700;
+          font-size: 0.9rem;
+          white-space: nowrap;
+
+          i {
+            margin-right: 0.2rem;
+          }
+
+          &:hover {
+            background-color: $color-dark-30;
+          }
         }
 
-        &:hover {
-          background-color: $color-dark-30;
-        }
-      }
+        .message_status {
+          margin-left: 1rem;
+          color: $color-white;
+          font-size: 0.85em;
+          font-weight: 700;
 
-      .sending_msg {
-        margin-left: 1rem;
-        color: $color-white;
-        font-size: 0.85em;
-        font-weight: 700;
+          .success {
+            color: $color-green-50;
+          }
 
-        &.success {
-          color: $color-green-50;
-        }
-
-        &.error {
-          color: $color-red-50;
+          .error {
+            color: $color-red-50;
+          }
         }
       }
     }
