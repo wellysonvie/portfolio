@@ -236,7 +236,7 @@
   .send_message_modal {
     width: min(90vw, 600px);
     padding: 2rem;
-    @include border_radius(10px);
+    @include border_radius(5px);
     border-bottom: 2px solid $color-blue-50;
     background-color: $color-dark;
 
@@ -258,7 +258,7 @@
         padding: 0.8rem;
         margin-bottom: 1rem;
         background-color: $color-dark-50;
-        @include border_radius(4px);
+        @include border_radius(5px);
         color: $color-gray;
         font-family: $font-family-secondary;
 
@@ -276,6 +276,7 @@
       .btn_send {
         @extend %btn;
         padding: 0.6rem 1rem;
+        @include border_radius(5px);
         background-color: $color-dark-50;
         color: $color-white;
         font-weight: 700;
@@ -334,6 +335,7 @@
     &_details {
       flex: 1;
       padding: 1.5rem;
+      @include border_radius(0 5px 0 0);
       background-color: $color-dark-50;
 
       display: flex;
@@ -394,7 +396,6 @@
       &_footer {
         margin-top: auto;
         width: 100%;
-        border-top: 1px solid rgba(0, 0, 0, 0.125);
         background-color: rgba(0, 0, 0, 0.03);
 
         display: flex;
