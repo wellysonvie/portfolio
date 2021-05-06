@@ -105,7 +105,7 @@
       &_card {
         flex-basis: 100%;
         min-height: 13rem;
-        padding: 1.6rem;
+        padding: 1.5rem;
         margin-bottom: 1.5rem;
         @include border_radius(5px);
         background-color: $color-dark-50;
@@ -210,6 +210,7 @@
   z-index: 99;
   width: 100vw;
   height: 100vh;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.75);
 
   display: flex;
@@ -305,6 +306,132 @@
       }
     }
   }
+
+  .project_modal {
+    width: min(90vw, 1000px);
+    height: min(90vh, 30rem);
+    @include border_radius(5px);
+    background-color: $color-dark;
+    border-bottom: 2px solid $color-blue-50;
+
+    display: flex;
+
+    &_img {
+      width: 60%;
+      height: 100%;
+      padding: 0.8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_details {
+      flex: 1;
+      padding: 1.5rem;
+      background-color: $color-dark-50;
+
+      display: flex;
+      flex-direction: column;
+
+      &_title {
+        margin-bottom: 0.8rem;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        h3 {
+          flex-basis: 70%;
+          font-size: 1.4rem;
+        }
+
+        .created_at {
+          flex-basis: 30%;
+          margin-left: auto;
+          font-size: 0.8rem;
+          text-align: right;
+          font-weight: 400;
+          color: darken($color-white, 15);
+        }
+      }
+
+      &_content {
+        width: 100%;
+        margin-bottom: 0.8rem;
+        overflow-y: auto;
+
+        p {
+          margin-bottom: 0.8rem;
+          font-size: 1rem;
+          line-height: 1.6;
+          color: $color-gray;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          li {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.3rem 0.5rem;
+            @include border_radius(10px);
+            background-color: $color-dark;
+            color: $color-gray;
+            font-weight: 400;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      &_footer {
+        margin-top: auto;
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: rgba(0, 0, 0, 0.03);
+
+        display: flex;
+        justify-content: space-between;
+
+        .btn_run,
+        .btn_src {
+          flex-basis: 45%;
+          @extend %btn;
+          padding: 0.6rem 1rem;
+          text-align: center;
+          background-color: $color-dark-30;
+          color: $color-white;
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-decoration: none;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            margin-right: 0.2rem;
+          }
+
+          &:hover {
+            background-color: lighten($color-dark-30, 8);
+          }
+
+          &[disabled="true"] {
+            cursor: not-allowed;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -324,6 +451,18 @@
       &_projects_card:hover {
         transform: scale(1);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project_modal {
+    flex-direction: column;
+
+    &_img {
+      height: 100%;
+      margin: 0 auto;
+      padding: 0.5rem !important;
     }
   }
 }
