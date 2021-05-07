@@ -32,12 +32,12 @@
 
     p {
       text-align: left;
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.7;
       color: $color-gray;
 
       span {
-        filter: brightness(140%);
+        filter: brightness(130%);
         font-weight: 700;
       }
     }
@@ -63,11 +63,12 @@
           margin-left: auto;
 
           button {
-            padding: 0.5rem 0.7rem;
+            padding: 0.6rem 0.7rem;
             @include border_radius(5px);
             background-color: $color-dark-50;
             color: $color-white;
             font-size: 0.8rem;
+            font-weight: 700;
 
             transition: all 0.2s;
 
@@ -146,6 +147,7 @@
               font-size: 0.75rem;
               text-align: right;
               font-weight: 400;
+              font-family: $font-family-primary;
               color: darken($color-white, 15);
             }
           }
@@ -174,7 +176,7 @@
               @include border_radius(10px);
               background-color: $color-dark;
               color: $color-gray;
-              font-weight: 400;
+              font-weight: 700;
               font-size: 0.8rem;
             }
           }
@@ -269,6 +271,7 @@
       }
 
       textarea {
+        height: 8.5rem;
         min-height: 6.25rem;
         max-height: 12rem;
       }
@@ -365,6 +368,7 @@
           font-size: 0.8rem;
           text-align: right;
           font-weight: 400;
+          font-family: $font-family-primary;
           color: darken($color-white, 15);
         }
       }
@@ -393,7 +397,7 @@
             @include border_radius(10px);
             background-color: $color-dark;
             color: $color-gray;
-            font-weight: 400;
+            font-weight: 700;
             font-size: 0.8rem;
           }
         }

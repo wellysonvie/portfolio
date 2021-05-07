@@ -7,8 +7,6 @@
   outline: none;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lexend:wght@300;400;700&display=swap");
-
 :root {
   scroll-behavior: smooth !important;
 }
@@ -34,7 +32,7 @@ input,
 textarea,
 button {
   font-family: $font-family-secondary;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   color: $color-gray;
 }
@@ -45,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 700;
   font-family: $font-family-primary;
   color: $color-white;
 }
@@ -75,11 +73,11 @@ button {
   @include border_radius(10px);
 } */
 ::-webkit-scrollbar-thumb {
-  background: $color-dark-50;
+  background: rgba(255, 255, 255, 0.2);
   @include border_radius(2px);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $color-dark-50;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 %btn {
