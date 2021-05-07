@@ -1,10 +1,12 @@
-$fontSize: 16px;
-$font-family: "PT Sans", sans-serif;
-$color-font-default: #343e5c;
+$font-family-primary: "Ubuntu", sans-serif;
+$font-family-secondary: "Ubuntu Mono", monospace;
 
-$color-main-default: #222831;
-$color-main-secondary: #393e46;
-$color-main-light-blue: #00adb5;
-$color-main-light: #f8f9fa;
-$color-main-error: #ff6262;
-$color-main-success: #01a001;
+$color-white: #fff;
+$color-blue: #0093e9;
+$color-blue-50: #80d0c7;
+$color-dark: #121214;
+$color-dark-50: rgb(32, 32, 36);
+$color-dark-30: rgb(41, 41, 46);
+$color-gray: #979ca7;
+$color-green-50: #93ff93;
+$color-red-50: #ff8484;

@@ -1,153 +1,136 @@
-$(document).ready(function () {
-    $('.menu_mobile_icon').on('click', function () {
-        $('.menu_mobile_submenu').toggleClass('ds_none');
+function closeModal() {
+  document.querySelector('.modal_overlay').classList.add('ds_none');
+  document.querySelector('.send_message_modal').classList.add('ds_none');
+  document.querySelector('.project_modal').classList.add('ds_none');
+}
+
+let projects = [];
+
+fetch('./js/projects.json')
+  .then(response => response.json())
+  .then(data => {
+    projects = data.map(project => ({
+      ...project,
+      image: project.image || 'assets/images/default.png',
+      created_at: new Date(project.created_at).toLocaleString([], { year: 'numeric', month: 'long' }),
+      skills: project.skills.split(',').map(skill => `<li>${skill}</li>`).join('')
+    }));
+
+    const projectsHTML = document.querySelector('.container_main_projects ul');
+
+    projectsHTML.innerHTML = projects.reduce((html, project) => {
+      return html += `
+        <li class="container_main_projects_card" data-id="${project.id}">
+          <img src="${project.image}" alt="${project.title}">
+          <div class="container_main_projects_card_details">
+            <div class="container_main_projects_card_details_title">
+              <h3>${project.title}</h3>
+              <span class="created_at">
+                ${project.created_at}
+              </span>
+            </div>
+            <p>${project.description}</p>
+            <ul>
+              ${project.skills}
+            </ul>
+          </div>
+        </li>
+      `;
+    }, '');
+
+    document.querySelectorAll('.container_main_projects_card').forEach(card => {
+      card.addEventListener('click', function () {
+        const projectId = this.getAttribute('data-id');
+        const project = projects.filter(project => project.id == projectId)[0];
+        renderProjectInModal(project);
+        document.querySelector('.modal_overlay').classList.remove('ds_none');
+        document.querySelector('.project_modal').classList.remove('ds_none');
+      })
     });
-
-    $('.menu_mobile_submenu').on('click', function () {
-        $(this).addClass('ds_none');
-    });
-
-    $("body").mouseup(function (e) {
-        const $menu_mobile_submenu = $(".menu_mobile_submenu");
-        const $menu_mobile_icon = $(".menu_mobile_icon");
-        const $project_modal = $(".project_modal");
-        const $project_modal_content = $(".project_modal_content");
-
-        if (!$menu_mobile_submenu.is(e.target) && $menu_mobile_submenu.has(e.target).length === 0
-            && !$menu_mobile_icon.is(e.target) && $menu_mobile_icon.has(e.target).length === 0
-            && !$project_modal_content.is(e.target) && $project_modal_content.has(e.target).length === 0) {
-            if ($menu_mobile_submenu.is(':visible'))
-                $menu_mobile_submenu.addClass('ds_none');
-            if ($project_modal.is(':visible'))
-                $project_modal.removeClass('active');
-        }
-    });
-
-    $(this).scroll(function() {
-        $(".back_to_top").toggle($(this).scrollTop() > 200);
-    });
-
-    const baseUrl = "https://wellysonvie-portfolio-api.herokuapp.com/api";
-    let portfolioList = [];
-
-    $.get({ url: './js/projects.json' }, function (data) {
-        portfolioList = data;
-        portfolioList.forEach((item, index) => {
-            addCardportfolio(getItemProject(index), index);
-        });
-
-        $(".show_modal").on('click', function () {
-            showModal($(this));
-        });
-    }).fail(function () {
-        $(".main_portfolio_content_list").html('<p>Erro ao carregar projetos.</p>');
-    }).always(function () {
-        $(".load_projects").addClass("ds_none");
-    });
+  });
 
 
-    function getItemProject(projectId) {
-        let project = portfolioList[projectId];
 
-        return {
-            ...project,
-            image: project.image || 'assets/images/default.png',
-            skills: project.skills.split(',').map(skill => { return `<li>${skill}</li>` }).join(''),
-            created_at: new Date(project.created_at).toLocaleString([], { year: 'numeric', month: 'long' })
-        };
+document.querySelector('.btn_close_modal').addEventListener('click', closeModal);
+
+document.querySelector('.modal_overlay').addEventListener('click', function (event) {
+  if (event.target.className === 'modal_overlay') {
+    closeModal();
+  }
+});
+
+document.querySelector('.btn_open_send_message_modal').addEventListener('click', function () {
+  document.querySelector('.modal_overlay').classList.remove('ds_none');
+  document.querySelector('.send_message_modal').classList.remove('ds_none');
+});
+
+function renderProjectInModal(project) {
+  document.querySelector('.project_modal').innerHTML = `
+    <div class="project_modal_img">
+      <img src="${project.image}" alt="${project.title}">
+    </div>
+    <div class="project_modal_details">
+      <div class="project_modal_details_title">
+        <h3>${project.title}</h3>
+        <span class="created_at">
+          ${project.created_at}
+        </span>
+      </div>
+      <div class="project_modal_details_content">
+        <p>${project.description}</p>
+        <ul>
+          ${project.skills}
+        </ul>
+      </div>
+      <div class="project_modal_details_footer">
+        <a 
+          class="btn_run" 
+          target="_blank" 
+          href="${project.url_to_run}"
+          ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' disabled='true'" : ""}
+        >
+          <i class="far fa-play-circle"></i>&nbsp;Executar
+        </a>
+        <a 
+          class="btn_src" 
+          target="_blank" 
+          href="${project.url_src}"
+          ${project.url_src == "" ? "onclick='return false;' title='Indisponível' disabled='true'" : ""}
+        >
+          <i class="fas fa-code"></i>&nbsp;Código-fonte
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+document.querySelector('.btn_send_message').addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const status = {
+    200: '<span class="success">Sua mensagem foi enviada com sucesso!</span>',
+    400: '<span class="error">E-mail inválido ou nome e mensagem vazios!</span>',
+    500: '<span class="error">Desculpe. Ocorreu um erro ao tentar enviar sua mensagem!</span>'
+  };
+
+  const messageStatus = document.querySelector('.message_status');
+
+  messageStatus.innerText = 'Aguarde...';
+  messageStatus.classList.remove('ds_none');
+
+  const sendMessageForm = document.forms.sendMessageForm;
+
+  fetch("https://wellysonvie-portfolio-api.herokuapp.com/api/contact", {
+    method: "POST",
+    body: new FormData(sendMessageForm)
+  }).then(response => {
+    messageStatus.innerHTML = status[response.status];
+    if (response.status === 200) {
+      sendMessageForm.name.value = '';
+      sendMessageForm.email.value = '';
+      sendMessageForm.message.value = '';
     }
-
-    function addCardportfolio(project, index) {
-
-        $(".main_portfolio_content_list").append(
-            `<article class="main_portfolio_content_list_item" id="project-${project.id}" style="display:none;">
-            <div class="main_portfolio_content_list_item_img">
-              <a class="show_modal" data-projectidx="${index}">
-                <img src="${project.image}" alt="Imagem do projeto">
-              </a>
-            </div>
-            <div class="main_portfolio_content_list_item_body">
-              <h2><a class="show_modal" data-projectidx="${index}">${project.title}</a></h2>
-              <p>${project.description}</p>
-              <small>Criado em: ${project.created_at}</small>
-              <ul>
-                ${project.skills}
-              </ul>
-            </div>
-            <div class="main_portfolio_content_list_item_footer">
-              <a class="btn_run" href="${project.url_to_run}" target="_blank"
-                ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
-                <i class="far fa-play-circle"></i>&nbsp;Executar
-              </a>
-              <a class="btn_src" href="${project.url_src}" target="_blank" 
-                ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
-                <i class="fas fa-code"></i>&nbsp;Código-fonte
-              </a>
-            </div>
-          </article>`
-        );
-
-        $("#project-" + project.id).fadeIn("slow");
-    }
-
-    $("#contactForm").submit(function (event) {
-        event.preventDefault();
-    });
-
-    $(".btn_send").on('click', function (event) {
-
-        $("#contactForm").submit();
-        $(".sending_msg").text("Enviando...");
-        $(".sending_msg").removeClass("ds_none success error");
-
-        $.post(baseUrl + '/contact', $("#contactForm").serialize(), function (data) {
-            $("#name").val("");
-            $("#email").val("");
-            $("#message").val("");
-            $(".sending_msg").addClass("success");
-            $(".sending_msg").text("Mensagem enviada com sucesso!");
-        }).fail(function () {
-            $(".sending_msg").addClass("error");
-            $(".sending_msg").text("Ocorreu um erro ao enviar a mensagem!");
-        });
-    });
-
-    $("img.close").on('click', function () {
-        $(".project_modal").removeClass("active");
-    });
-
-    function showModal(element) {
-
-        const projectIdx = element.data("projectidx");
-        const project = getItemProject(projectIdx);
-
-        $(".project_modal_content").html(
-            `<div class="project_modal_content_img">
-                <img src="${project.image}" alt="Imagem">
-            </div>
-            <div class="project_modal_content_description">
-                <div class="project_modal_content_description_body">
-                    <h2>${project.title}</h2>
-                    <p>${project.description}</p>
-                    <small>Criado em: ${project.created_at}</small>
-                    <ul>
-                        ${project.skills}
-                    </ul>
-                </div>
-                <div class="project_modal_content_description_footer">
-                    <a class="btn_run" href="${project.url_to_run}" target="_blank"
-                        ${project.url_to_run == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
-                        <i class="far fa-play-circle"></i>&nbsp;Executar
-                    </a>
-                    <a class="btn_src" href="${project.url_src}" target="_blank" 
-                        ${project.url_src == "" ? "onclick='return false;' title='Indisponível' style='cursor: not-allowed;opacity: 0.6;'" : ""}>
-                        <i class="fas fa-code"></i>&nbsp;Código-fonte
-                    </a>
-                </div>
-            </div>`
-        );
-
-        $(".project_modal").addClass("active");
-    }
-
+  }).catch(error => {
+    messageStatus.innerHTML = status[500];
+  });
 });

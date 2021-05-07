@@ -4,42 +4,84 @@
   padding: 0;
   border: 0;
   list-style: none;
-  outline: none
+  outline: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-
 :root {
-  font-size: $fontSize;
-  font-family: $font-family;
   scroll-behavior: smooth !important;
 }
 
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; //15px
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; //14px
+  }
+}
+
+body {
+  background-color: $color-dark;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 1rem;
+  color: $color-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: $font-family-primary;
+  color: $color-white;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
 }
-::-webkit-scrollbar-track {
-  background: #ebebeb; 
-  @include border_radius(10px); 
-}
-::-webkit-scrollbar-thumb {
-  background: #bbb;
+/* ::-webkit-scrollbar-track {
+  background: $color-gray;
   @include border_radius(10px);
+} */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  @include border_radius(2px);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(141, 141, 141); 
-}
-
-/* CLASSES BASES */
-
-.container {
-  width: min(90vw, 1300px);
-  margin: auto;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 %btn {
-  padding: 5px 8px;
+  padding: 0.3rem 0.5rem;
   border: 1px solid transparent;
   @include border_radius(0.25rem);
   outline: none;
