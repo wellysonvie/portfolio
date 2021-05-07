@@ -1,3 +1,9 @@
+function closeModal() {
+  document.querySelector('.modal_overlay').classList.add('ds_none');
+  document.querySelector('.send_message_modal').classList.add('ds_none');
+  document.querySelector('.project_modal').classList.add('ds_none');
+}
+
 let projects = [];
 
 fetch('./js/projects.json')
@@ -43,10 +49,14 @@ fetch('./js/projects.json')
     });
   });
 
-document.querySelector('.btn_close_modal').addEventListener('click', function () {
-  document.querySelector('.modal_overlay').classList.add('ds_none');
-  document.querySelector('.send_message_modal').classList.add('ds_none');
-  document.querySelector('.project_modal').classList.add('ds_none');
+
+
+document.querySelector('.btn_close_modal').addEventListener('click', closeModal);
+
+document.querySelector('.modal_overlay').addEventListener('click', function (event) {
+  if (event.target.className === 'modal_overlay') {
+    closeModal();
+  }
 });
 
 document.querySelector('.btn_open_send_message_modal').addEventListener('click', function () {
