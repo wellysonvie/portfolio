@@ -117,6 +117,18 @@ document.querySelector('.btn_open_send_message_modal').addEventListener('click',
   document.querySelector('.send_message_modal').classList.remove('ds_none');
 });
 
+document.querySelector('body').addEventListener('keydown', function (event) {
+  if ((event.keyCode || event.which) == 27) {
+    closeModal();
+  }
+  if ((event.keyCode || event.which) == 37) {
+    document.querySelector('.btn_previous_project').click();
+  }
+  if ((event.keyCode || event.which) == 39) {
+    document.querySelector('.btn_next_project').click();
+  }
+});
+
 document.querySelector('.btn_send_message').addEventListener('click', function (event) {
   event.preventDefault();
 
