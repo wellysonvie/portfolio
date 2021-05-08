@@ -318,7 +318,7 @@
   }
 
   .project_modal {
-    width: min(90vw, 1000px);
+    width: min(80vw, 1000px);
     height: min(90vh, 30rem);
     @include border_radius(5px);
     background-color: $color-dark;
@@ -431,7 +431,7 @@
             margin-right: 0.2rem;
           }
 
-          &:hover {
+          &:not([disabled="true"]):hover {
             background-color: lighten($color-dark-30, 8);
           }
 
@@ -441,6 +441,36 @@
           }
         }
       }
+    }
+
+    position: relative;
+
+    .btn_next_project,
+    .btn_previous_project {
+      position: absolute;
+      top: calc(50% - 1.5rem);
+      color: $color-gray;
+      font-size: 3rem;
+      cursor: pointer;
+
+      transition: all 0.2s;
+
+      &:not([disabled="true"]):hover {
+        color: $color-white;
+      }
+
+      &[disabled="true"] {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+
+    .btn_previous_project {
+      left: -2.6rem;
+    }
+
+    .btn_next_project {
+      right: -2.6rem;
     }
   }
 }

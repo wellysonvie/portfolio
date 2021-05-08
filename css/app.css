@@ -386,7 +386,7 @@ button {
   color: #ff8484;
 }
 .modal_overlay .project_modal {
-  width: min(90vw, 1000px);
+  width: min(80vw, 1000px);
   height: min(90vh, 30rem);
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -394,6 +394,7 @@ button {
   background-color: #121214;
   border-bottom: 2px solid #80d0c7;
   display: flex;
+  position: relative;
 }
 .modal_overlay .project_modal_img {
   width: 60%;
@@ -489,14 +490,38 @@ button {
 .modal_overlay .project_modal_details_footer .btn_src i {
   margin-right: 0.2rem;
 }
-.modal_overlay .project_modal_details_footer .btn_run:hover,
-.modal_overlay .project_modal_details_footer .btn_src:hover {
+.modal_overlay .project_modal_details_footer .btn_run:not([disabled=true]):hover,
+.modal_overlay .project_modal_details_footer .btn_src:not([disabled=true]):hover {
   background-color: #3c3c44;
 }
 .modal_overlay .project_modal_details_footer .btn_run[disabled=true],
 .modal_overlay .project_modal_details_footer .btn_src[disabled=true] {
   cursor: not-allowed;
   opacity: 0.6;
+}
+.modal_overlay .project_modal .btn_next_project,
+.modal_overlay .project_modal .btn_previous_project {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  color: #979ca7;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal_overlay .project_modal .btn_next_project:not([disabled=true]):hover,
+.modal_overlay .project_modal .btn_previous_project:not([disabled=true]):hover {
+  color: #fff;
+}
+.modal_overlay .project_modal .btn_next_project[disabled=true],
+.modal_overlay .project_modal .btn_previous_project[disabled=true] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.modal_overlay .project_modal .btn_previous_project {
+  left: -2.6rem;
+}
+.modal_overlay .project_modal .btn_next_project {
+  right: -2.6rem;
 }
 
 @media screen and (max-width: 1024px) {

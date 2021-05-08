@@ -3,7 +3,7 @@
     "id": 14,
     "title": "Site de Portfólio",
     "description": "Site simples para apresentar projetos do portfólio.",
-    "skills": "HTML5,CSS3,SASS,JavaScript,PHP,PostgreSQL",
+    "skills": "HTML5,CSS3,Sass,JavaScript,PHP,PostgreSQL",
     "image": "https://raw.githubusercontent.com/wellysonvie/portfolio/main/assets/images/img-portfolio-site-2.png",
     "url_to_run": "https://wellysonvie.github.io/portfolio/",
     "url_src": "https://github.com/wellysonvie/portifolio",
