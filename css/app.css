@@ -163,13 +163,13 @@ button {
   margin-left: auto;
 }
 .container_sidebar .contacts li:last-child button {
-  padding: 0.6rem 0.7rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   background-color: #202024;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
   transition: all 0.2s;
 }
