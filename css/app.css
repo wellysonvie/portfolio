@@ -179,21 +179,25 @@ button {
 }
 .container_main {
   flex: 1;
-  overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 2rem 0 4rem;
   margin-top: 4rem;
-  position: relative;
 }
-.container_main h2 {
-  margin-bottom: 2rem;
+.container_main_projects {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container_main_projects h2 {
+  margin-bottom: 1.2rem;
+  padding-left: 4rem;
   background: -webkit-linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container_main_projects {
-  display: flex;
-  flex-direction: column;
+.container_main_projects > ul {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 0.5rem 2rem 0 4rem;
 }
 .container_main_projects_card {
   flex-basis: 100%;
@@ -570,7 +574,9 @@ button {
   }
   .container_main {
     width: 100%;
-    padding: 0;
+  }
+  .container_main_projects > ul, .container_main_projects h2 {
+    padding: 0 !important;
   }
   .container_main_projects_card:hover {
     transform: scale(1);
