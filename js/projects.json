@@ -35,7 +35,7 @@
   {
     "id": 12,
     "title": "move.it",
-    "description": "Projeto desenvolvido na trilha de ReactJS da NLW#4 - RocketSeat.<br><br>Consiste em um contador de tempo com intervalos de 25 minutos, que no fim de cada intervalo é proposto um desafio aleatório, que envolve exércicios para os olhos ou corpo, e ao completar o desafio, o usuário ganha pontos de experiência e pode subir de nível.",
+    "description": "Projeto desenvolvido na trilha de ReactJS da NLW#4 - RocketSeat.<br><br>Consiste em um contador de tempo com intervalos de 25 minutos, que no fim de cada intervalo é proposto um desafio aleatório, que envolve exercícios para os olhos ou corpo, e ao completar o desafio, o usuário ganha pontos de experiência e pode subir de nível.",
     "skills": "HTML5,CSS3,ReactJS,Next.js",
     "image": "https://raw.githubusercontent.com/wellysonvie/NLW-4/main/public/screenshot.webp",
     "url_to_run": "https://moveit-steel-eight.vercel.app",
@@ -57,7 +57,7 @@
   {
     "id": 11,
     "title": "App Curupira",
-    "description": "Aplicativo mobile para auxiliar no envio de denúncias envolvendo crimes contra animais ao órgão responsável.",
+    "description": "Aplicativo mobile para auxiliar no envio de denúncias ao órgão responsável de crimes contra animais silvestres.",
     "skills": "Java,Android SDK,Firebase",
     "image": "https://raw.githubusercontent.com/wellysonvie/portfolio/main/assets/images/img-portfolio-curupira.webp",
     "url_to_run": "https://play.google.com/store/apps/details?id=com.ufpi.curupira",
@@ -68,7 +68,7 @@
   {
     "id": 10,
     "title": "Sistema do Museu de Arte Sacra",
-    "description": "Sistema Web para fichamento das peças do Museu de Arte Sacra de Teresina - PI.",
+    "description": "Sistema web para realizar o levantamento do acervo de peças do Museu de Arte Sacra em Teresina - PI.",
     "skills": "HTML5,CSS3,JavaScript,Bootstrap,PHP,MySQL",
     "image": "https://raw.githubusercontent.com/wellysonvie/portfolio/main/assets/images/img-portfolio-mas.webp",
     "url_to_run": "http://acervomasthe.epizy.com/",
