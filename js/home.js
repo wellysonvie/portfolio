@@ -65,7 +65,7 @@ fetch('./js/projects.json')
   .then(data => {
     projects = data.map(project => ({
       ...project,
-      image: project.image || 'assets/images/default.png',
+      image: project.image || 'assets/images/default.webp',
       created_at: new Date(project.created_at).toLocaleString([], { year: 'numeric', month: 'long' }),
       skills: project.skills.split(',').map(skill => `<li>${skill}</li>`).join('')
     }));
@@ -75,7 +75,7 @@ fetch('./js/projects.json')
     projectsHTML.innerHTML = projects.reduce((html, project) => {
       return html += `
         <li class="container_main_projects_card" data-id="${project.id}">
-          <img src="${project.image}" alt="${project.title}">
+          <img src="${project.image}" alt="${project.title}" loading="lazy">
           <div class="container_main_projects_card_details">
             <div class="container_main_projects_card_details_title">
               <h3>${project.title}</h3>
