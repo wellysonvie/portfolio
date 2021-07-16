@@ -2,9 +2,9 @@
 
 Site simples para apresentar portfólio.<br>
 
-Link: https://wellysonvie.github.io/portfolio/
+Acesse: https://wellysonvie.github.io/portfolio
 
-## ✨ Tecnologias
+## ⚙️ Tecnologias utilizadas
 
 - HTML5/CSS3
 - Sass
