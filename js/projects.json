@@ -1,5 +1,16 @@
 [
   {
+    "id": 17,
+    "title": "Payment Control",
+    "description": "Web app para organização e controle de pagamentos.",
+    "skills": "TypeScript,ReactJS,Tailwind CSS",
+    "image": "https://raw.githubusercontent.com/wellysonvie/payment-control/main/.github/screenshot.webp",
+    "url_to_run": "https://payment-control.vercel.app",
+    "url_src": "https://github.com/wellysonvie/payment-control",
+    "created_at": "2021-07-16 18:00:00",
+    "updated_at": "2021-07-16 18:00:00"
+  },
+  {
     "id": 16,
     "title": "Tech commerce",
     "description": "E-commerce simples utilizando Next.js.",
