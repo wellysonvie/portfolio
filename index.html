@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#29292e" />
+    <title>Wellyson V. Dias</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wellyson V. Dias</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/app.css">
-</head>
-
-<body>
-
-  <div class="container">
-    <aside class="container_sidebar">
-      <img src="./assets/images/profile.webp" alt="Wellyson V. Dias">
-      <h1>Wellyson Vieira Dias</h1>
-      <p>
-        🎓 Bacharel em Ciência da Computação em 2019 pela UFPI.
-        <br><br>
-        👨‍💻 <span>Já atuei como desenvolvedor Web,</span> realizando manutenção e evolução de sistemas web, utilizando
-        tecnologias como:
-        <span>HTML5/CSS3, JavaScript, jQuery, PHP, Laravel e SQL.</span>
-        <br><br>
-        🚀 Atualmente estou <span>aprofundando meus conhecimentos em JavaScript, ReactJS e outras tecnologias relacionadas.</span>
-      </p>
-      <ul class="contacts">
-        <li>
-          <a href="https://github.com/wellysonvie" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/wellysonvie" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:wellysonvie@gmail.com" target="_blank" title="E-mail">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </li>
-        <li>
-          <button class="btn_open_send_message_modal">Enviar mensagem</button>
-        </li>
-      </ul>
-    </aside>
-
-    <main class="container_main">
-      <div class="container_main_projects">
-        <h2>Portfólio</h2>
-        <ul>
-          <!-- Projetos -->
+  <body>
+    <div class="container">
+      <aside class="container_sidebar">
+        <img src="./assets/images/profile.webp" alt="Wellyson V. Dias" />
+        <h1>Wellyson Vieira Dias</h1>
+        <p>
+          🎓 Bacharel em Ciência da Computação em 2019 pela UFPI.
+          <br /><br />
+          👨‍💻 <span>Já atuei como desenvolvedor Web,</span> realizando manutenção
+          e evolução de sistemas web, utilizando tecnologias como:
+          <span>HTML5/CSS3, JavaScript, jQuery, PHP, Laravel e SQL.</span>
+          <br /><br />
+          🚀 Atualmente estou
+          <span
+            >aprofundando meus conhecimentos em JavaScript, ReactJS e outras
+            tecnologias relacionadas.</span
+          >
+        </p>
+        <ul class="contacts">
+          <li>
+            <a
+              href="https://github.com/wellysonvie"
+              target="_blank"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/wellysonvie"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:wellysonvie@gmail.com"
+              target="_blank"
+              title="E-mail"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <button class="btn_open_send_message_modal">Enviar mensagem</button>
+          </li>
         </ul>
-      </div>
-    </main>
-  </div>
+      </aside>
 
-  <div class="modal_overlay ds_none">
-    <span class="btn_close_modal">&times;</span>
-
-    <div class="send_message_modal ds_none">
-      <form name="sendMessageForm" action="" method="post" autocomplete="off">
-        <h2>Escreva uma mensagem</h2>
-        <input type="text" name="name" id="name" placeholder="Seu nome" required autocomplete="no">
-        <input type="email" name="email" id="email" placeholder="Seu e-mail principal" required>
-        <textarea name="message" id="message" rows="5" placeholder="Sua mensagem..." required></textarea>
-        <div>
-          <button type="submit" class="btn_send_message">
-            <i class="fas fa-paper-plane"></i>&nbsp;Enviar
-          </button>
-          <p class="message_status ds_none"></p>
+      <main class="container_main">
+        <div class="container_main_projects">
+          <h2>Portfólio</h2>
+          <ul>
+            <!-- Projetos -->
+          </ul>
         </div>
-      </form>
+      </main>
     </div>
 
-    <div class="project_modal ds_none">
-      <!-- Project -->
+    <div class="modal_overlay ds_none">
+      <span class="btn_close_modal">&times;</span>
+
+      <div class="send_message_modal ds_none">
+        <form name="sendMessageForm" action="" method="post" autocomplete="off">
+          <h2>Escreva uma mensagem</h2>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Seu nome"
+            required
+            autocomplete="no"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Seu e-mail principal"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Sua mensagem..."
+            required
+          ></textarea>
+          <div>
+            <button type="submit" class="btn_send_message">
+              <i class="fas fa-paper-plane"></i>&nbsp;Enviar
+            </button>
+            <p class="message_status ds_none"></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="project_modal ds_none">
+        <!-- Project -->
+      </div>
     </div>
-  </div>
 
-  <script src="https://kit.fontawesome.com/6bff9f7fc2.js" crossorigin="anonymous"></script>
-  <script src="js/home.js"></script>
-
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/6bff9f7fc2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/home.js"></script>
+  </body>
 </html>
